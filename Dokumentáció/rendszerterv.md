@@ -35,7 +35,7 @@
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
-   - [ ] Reszponzív weboldal, hellyel-közzel dinamikus megvalósításokkal
+   - [ ] Reszponzív, dinamikus weboldal
    - [ ] Felhasználókezelő rendszer
    - [ ] Backend része PHP legyen
    - [ ] Űrlap mezők validálása
@@ -83,8 +83,8 @@
 
 ## 9. Adatbázis terv
    * Users tábla
-   * Product tábla (ennek a nevét később lehet, megváltoztatjuk)
-   * ...
+   * Product tábla (ennek a nevét később lehet, megváltoztatjuk)  
+   *A többi még tervezés alatt...*
 ## 10. Implementációs terv
 
 ## 11. Tesztterv
