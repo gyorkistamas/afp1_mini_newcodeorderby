@@ -1,17 +1,17 @@
 # Rendszerterv
 ## 1. A rendszer célja
-
+   Termék értékelő weblap háttérben működő adatbázissal, felhasználó rendszerrel, termék feltöltése és felhasználó regisztrálása funkciókkal PHP-ban (Backend) és HTML + CSS + JS-ben (Frontend) megvalósítva.
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
-   * Scrum masters:
+   * Scrum masters: Banyik Nándor, Matuch Richárd
    * Product owner: 
    * Üzleti szereplő:
      
 ### 2.2 Projektmunkások és felelőségek:
-   * Frontend:
-   * Backend:
-   * Tesztelés:
+   * Frontend: Kovács Dávid
+   * Backend: Györkis Tamás
+   * Tesztelés: Karácsony Balázs
      
 ### 2.3 Ütemterv:
 
@@ -65,14 +65,16 @@
 ### Fizikai alrendszerek
 
 ### Fejlesztő eszközök
-
+   * Programozás nyelvek: PHP, JavaScript
+   * Leíró nyelvek: HTML, CSS + Bootstrap
+   * Text Editor: Visual Studio Code, Vim
 
 ## 8. Architekturális terv
 
 ### Webszerver
-
+   Apache (Xampp-al futtatva)
 ### Adatbázis rendszer
-
+   MySQL
 ### A program elérése, kezelése
 
 ## 9. Adatbázis terv
