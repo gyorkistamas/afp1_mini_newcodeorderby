@@ -35,7 +35,11 @@
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
-
+   - [ ] Reszponzív weboldal, hellyel-közzel dinamikus megvalósításokkal
+   - [ ] Felhasználókezelő rendszer
+   - [ ] Backend része PHP legyen
+   - [ ] Űrlap mezők validálása
+   - [ ] 'Termékek hozzáadása' funkció megvalósítása
 ### Funkcionális követelmények
 
 | ID | Megnevezés | Leírás |
@@ -68,17 +72,19 @@
    * Programozás nyelvek: PHP, JavaScript
    * Leíró nyelvek: HTML, CSS + Bootstrap
    * Text Editor: Visual Studio Code, Vim
-
+   * Debugoláshoz: Google Chrome/Mozilla Firefox/Microsoft Edge/Opera fejlesztői konzol
 ## 8. Architekturális terv
 
 ### Webszerver
    Apache (Xampp-al futtatva)
 ### Adatbázis rendszer
-   MySQL
+   Relációs adatbázis - MySQL
 ### A program elérése, kezelése
 
 ## 9. Adatbázis terv
-
+   * Users tábla
+   * Product tábla (ennek a nevét később lehet, megváltoztatjuk)
+   * ...
 ## 10. Implementációs terv
 
 ## 11. Tesztterv
