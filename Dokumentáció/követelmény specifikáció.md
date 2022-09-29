@@ -2,13 +2,16 @@
 
 ## 1. Áttekintés
 
+
 ## 2. A jelenlegi helyzet leírása
+A jelenlegi helyzet alapján nincs lehetőség a termékek értékelésére, így az esetleges felhasználók, vásárlók nem tudnak tájékozódni a többiek véleményéből.
 
 ## 3. Vágyálomrendszer
 
-Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regisztráció és bejelentkezés után termékek hozzáadására, illetve ezen termékek értékelésére. Az alkalmazás tulajdonosai tudják ezeket moderálni, illetve új adminokat hozzáadni a rendszerhez.
+Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regisztráció és bejelentkezés után termékek hozzáadására, illetve ezen termékek értékelésére. Az alkalmazás tulajdonosai tudják ezeket moderálni.
 
 ## 4. Jelenlegi üzleti folyamatok modellje
+
 
 ## 5. Igényelt üzleti folyamatok modellje
 
@@ -17,7 +20,6 @@ Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regiszt
 - 2. Termékek felvitele az adatbázisba
   - 2.1 Termékek adatainak szerkesztése, vagy törlése (admin esetén)
 - 3. Termékek értékelésének lehetősége
-  - 3.1 Értékelés törlése admin által
 - 4. Felhasználók kezelése
   - 4.1 Lehetőség a felhasználót törölni, vagy módosítani jogait.
 
@@ -27,5 +29,8 @@ Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regiszt
 | :---: | --- | --- | --- |
 | M1 | Regisztráció | Regisztráció | Regisztrációs űrlap |
 | M2 | Bejelentkezés | Bejelentkezés | Bejelentkezési űrlap |
+| M3 | Terméklista | Terméklista | Adatbázisban található termékek kilistázása |
+| M4 | Termékmegtekint | Termék megtekintése | Termék adatainak és értékeléseinek megtekintése.|
+| M5 | Értékeléshozzáad | Értékelés hozzáadása | Szöveges értékelés hozzáadása termékhez. |
 
 ## 7. Fogalomtár
