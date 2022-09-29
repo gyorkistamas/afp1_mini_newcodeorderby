@@ -30,12 +30,12 @@
 
 ## 3. Üzleti folyamatok modellje
    - 1. Felhasználói fiók létrehozása
-   - 1.1 Admin és Felhasznalo jogosultsági körök
-   - 2. Termékek hozzaadas az adatbazis megfelelo tablajaba
-   - 2.1 Termekek adatainak szerkesztese, vagy torlese
-   - 3. Termékek értékelése
+   - 1.1 Admin és Felhasználó jogosultsági körök
+   - 2. Termékek hozzáadasa az adatbázis megfelelő táblájába
+   - 2.1 Termekek adatainak módosítása és törlése
+   - 3. Termékek értékelése funkció
    - 4. Felhasználók kezelése
-   - 4.1 Lehetőség a felhasználót törölni, vagy módosítani jogait.
+   - 4.1 Felhasználó törlése, jogainak módosítása
 ### 3.1 Üzleti szereplők
 
 ### 3.2 Üzleti folyamatok
