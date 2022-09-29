@@ -3,7 +3,7 @@
    Termék értékelő weblap háttérben működő adatbázissal, felhasználó rendszerrel, termék feltöltése és felhasználó regisztrálása funkciókkal PHP-ban (Backend) és HTML + CSS + JS-ben (Frontend) megvalósítva.
 ## 2. Projektterv
    PHP, HTML + CSS + JS projekt, ahol lehetőség van termékek kilistázására, felhasználók létrehozására, termékek létrehozása, termékekhez értékelések írására, termékek adatainak szerkesztésére.
-   Oldal támogassa a reszponzívitást.
+   Az oldal támogassa a reszponzivitást.
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters: Banyik Nándor, Matuch Richárd
    * Product owner: 
