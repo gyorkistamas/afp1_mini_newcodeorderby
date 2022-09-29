@@ -1,17 +1,24 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
+	N/A
 
 ## 2. Vágyállomrendszer leírása
+	Egy termék értékelő oldal. A termékek listája publikusan elérhető. Felhasználók hozzáadhatnak termékeket és szövegesen értékelhetik bármelyiket.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
+	N/A
 
 ## 4. Igényelt üzleti folyamatok modellje
+	N/A
 
 ## 5. Követelménylista
 
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| K1 | ...| ... | ... |
+| 1 | home.php | lista | a köszöntő oldal ami feltünteti az összes terméket |
+| 2 | item.php | termék | egy-egy kiválasztott terméket megjelenítő oldal |
+| 3 | auth.php | bejelentkezés | felhasználó bejelentkezés kezelő |
+| 4 | auth.php | regisztráció | felhasználó regisztráció kezelő |
 
 ## 6. Használati esetek
 
