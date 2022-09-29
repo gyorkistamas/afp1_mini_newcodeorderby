@@ -29,7 +29,13 @@
    * Prototípus átadása
 
 ## 3. Üzleti folyamatok modellje
-
+   - 1. Felhasználói fiók létrehozása
+   - 1.1 Admin és Felhasznalo jogosultsági körök
+   - 2. Termékek hozzaadas az adatbazis megfelelo tablajaba
+   - 2.1 Termekek adatainak szerkesztese, vagy torlese
+   - 3. Termékek értékelése
+   - 4. Felhasználók kezelése
+   - 4.1 Lehetőség a felhasználót törölni, vagy módosítani jogait.
 ### 3.1 Üzleti szereplők
 
 ### 3.2 Üzleti folyamatok
