@@ -74,6 +74,8 @@
 ## 5. Funkcionális terv
 
 ### 5.1 Rendszerszereplők
+   * Admin (Adminisztrátor)
+   * User (Felhasználó)
 
 ### 5.2 Menühierarchiák
 
@@ -109,6 +111,10 @@
    ![Image](database%20diagram.jpg)
 
 ## 9. Implementációs terv
+   A weboldal HTML, CSS, JS, PHP nyelveken írtuk.  
+   A különböző nyelvek kódjait elszeparáltuk egymástól külön mappákba, ebből kifolyólag átláthatóbb lesz az alkalmazás szerkezete.
+   A forráskódban angol elnevezések használatában döntöttünk, míg a program könyvtár szerkezetében maradtunk a magyarnál, tehát a változók és metódusok neveit angolul, a mappák neveit magyarul implementáltuk.  
+   Törekedtünk arra, hogy az oldalon fellelhető adatok nagy részét MySQL adatbázisban tároljuk.
 
 ## 10. Tesztterv
 
