@@ -33,7 +33,7 @@
 
 ## 3. Üzleti folyamatok modellje
    * 1. Felhasználói fiók létrehozása
-      * Admin és Felhasználó jogosultsági körök
+     * Admin és Felhasználó jogosultsági körök
    * 2. Termékek hozzáadasa az adatbázis megfelelő táblájába
      * Termekek adatainak módosítása és törlése
    * 3. Termékek értékelése funkció
@@ -52,7 +52,7 @@
    - [ ] Űrlap mezők validálása
    - [ ] 'Termékek hozzáadása' funkció megvalósítása
   
-### 4. 1 Funkcionális követelmények
+### 4.1 Funkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
@@ -69,7 +69,7 @@
 | K2 | Jogosultásgok | Egy közönséges felhasználó kevesebb dologhoz férhessen hozzá, mint egy admin joggal rendelkező. Csak az admin tudjon értékeléseket törölni. |
 
 ### 4.3 Támogatott eszközök
-   * PC
+   * PC Windows vagy Linux vagy MacOS operációs rendszerrel
   
 ## 5. Funkcionális terv
 
@@ -136,7 +136,7 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 
 ## 11. Telepítési terv
    Windows operációs rendszer használata esetén szükséges hozzá a Xampp nevű alkalmazás.  
-   Az alkalmazás fájljait tartalmazó mappát be kell másolni a xampp\htdocs mappába.
+   Az alkalmazás fájljait tartalmazó mappát be kell másolni a xampp\htdocs mappába és egy tetszőleges böngészőben a localhost-hoz navigálni.
 
 ## 12. Karbantartási terv
 
