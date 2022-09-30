@@ -6,8 +6,8 @@
    Az oldal támogassa a reszponzivitást.
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters: Banyik Nándor, Matuch Richárd
-   * Product owner: 
-   * Üzleti szereplő:
+   * Product owner: N/A
+   * Üzleti szereplő: N/A
      
 ### 2.2 Projektmunkások és felelőségek:
    * Frontend: Kovács Dávid
@@ -30,15 +30,15 @@
    * Prototípus átadása
 
 ## 3. Üzleti folyamatok modellje
-   - 1. Felhasználói fiók létrehozása
-   - 1.1 Admin és Felhasználó jogosultsági körök
-   - 2. Termékek hozzáadasa az adatbázis megfelelő táblájába
-   - 2.1 Termekek adatainak módosítása és törlése
-   - 3. Termékek értékelése funkció
-   - 4. Felhasználók kezelése
-   - 4.1 Felhasználó törlése, jogainak módosítása
+   * 1. Felhasználói fiók létrehozása
+      * Admin és Felhasználó jogosultsági körök
+   * 2. Termékek hozzáadasa az adatbázis megfelelő táblájába
+     * Termekek adatainak módosítása és törlése
+   * 3. Termékek értékelése funkció
+   * 4. Felhasználók kezelése
+     * Felhasználó törlése, jogainak módosítása
 ### 3.1 Üzleti szereplők
-
+   N/A
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
@@ -47,20 +47,22 @@
    - [ ] Backend része PHP legyen
    - [ ] Űrlap mezők validálása
    - [ ] 'Termékek hozzáadása' funkció megvalósítása
-### Funkcionális követelmények
+### 4. 1 Funkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
 | K1 | ... | ... |
 
-### Nemfunkcionális követelmények
+### 4.2 Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
 | K4 | ... | ... |
 
-### Támogatott eszközök
-
+### 4.3 Támogatott eszközök
+   * PC
+   * Tablet
+   * Mobiltelefon
 ## 5. Funkcionális terv
 
 ### 5.1 Rendszerszereplők
@@ -68,46 +70,44 @@
 ### 5.2 Menühierarchiák
 
 ## 6. Fizikai környezet
+   Lokális webszerver (Apache)
+### 6.1 Hardver topológia
 
-### Vásárolt softwarekomponensek és külső rendszerek
+### 6.2 Fizikai alrendszerek
 
-### Hardver topológia
-
-### Fizikai alrendszerek
-
-### Fejlesztő eszközök
+### 6.3 Fejlesztő eszközök
    * Programozás nyelvek: PHP, JavaScript
    * Leíró nyelvek: HTML, CSS + Bootstrap
    * Text Editor: Visual Studio Code, Vim
    * Debugoláshoz: Google Chrome/Mozilla Firefox/Microsoft Edge/Opera fejlesztői konzol
-## 8. Architekturális terv
+## 7. Architekturális terv
 
-### Webszerver
+### 7.1 Webszerver
    Apache (Xampp-al futtatva)
-### Adatbázis rendszer
+### 7.2 Adatbázis rendszer
    Relációs adatbázis - MySQL
-### A program elérése, kezelése
-
-## 9. Adatbázis terv
+### 7.3 A program elérése, kezelése
+   Webszerveren (Apache)
+## 8. Adatbázis terv
    * Users tábla
    * Product tábla (ennek a nevét később lehet, megváltoztatjuk)  
    *A többi még tervezés alatt...*
-## 10. Implementációs terv
+## 9. Implementációs terv
 
-## 11. Tesztterv
+## 10. Tesztterv
 
 A tesztelések célja a rendszer és komponensei funkcionalitásának teljes vizsgálata,
 ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása.
 A teszteléseket a fejlesztői csapat minden tagja elvégzi.
 Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
 
-### Tesztesetek
+### 10.1 Tesztesetek
 
  | Teszteset | Elvárt eredmény | 
  |-----------|-----------------| 
  | ... | ... |
 
-### A tesztelési jegyzőkönyv kitöltésére egy sablon:
+### 10.2 A tesztelési jegyzőkönyv kitöltésére egy sablon:
 
 **Tesztelő:** Vezetéknév Keresztnév
 
@@ -118,13 +118,13 @@ Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
 például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával sikeresen regisztrálni tud  | A felhasználó sikeresen regisztrált | Nem találtam problémát.
 ... | ... | ... | ... | ...
 
-## 12. Telepítési terv
+## 11. Telepítési terv
 
 Fizikai telepítési terv: 
 
 Szoftver telepítési terv: 
 
-## 13. Karbantartási terv
+## 12. Karbantartási terv
 
 Fontos ellenőrizni:
 ...
