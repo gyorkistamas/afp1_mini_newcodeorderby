@@ -130,10 +130,8 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ... | ... | ... | ... | ...
 
 ## 11. Telepítési terv
-
-Fizikai telepítési terv: 
-
-Szoftver telepítési terv: 
+   Windows operációs rendszer használata esetén szükséges hozzá a Xampp nevű alkalmazás.  
+   Az alkalmazás fájljait tartalmazó mappát be kell másolni a xampp\htdocs mappába.
 
 ## 12. Karbantartási terv
 
