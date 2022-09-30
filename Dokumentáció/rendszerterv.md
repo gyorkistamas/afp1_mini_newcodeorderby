@@ -1,9 +1,11 @@
 # Rendszerterv
 ## 1. A rendszer célja
    Termék értékelő weblap háttérben működő adatbázissal, felhasználó rendszerrel, termék feltöltése és felhasználó regisztrálása funkciókkal PHP-ban (Backend) és HTML + CSS + JS-ben (Frontend) megvalósítva.
+
 ## 2. Projektterv
    PHP, HTML + CSS + JS projekt, ahol lehetőség van termékek kilistázására, felhasználók létrehozására, termékek létrehozása, termékekhez értékelések írására, termékek adatainak szerkesztésére.
    Az oldal támogassa a reszponzivitást.
+
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters: Banyik Nándor, Matuch Richárd
    * Product owner: N/A
@@ -37,8 +39,10 @@
    * 3. Termékek értékelése funkció
    * 4. Felhasználók kezelése
      * Felhasználó törlése, jogainak módosítása
+  
 ### 3.1 Üzleti szereplők
    N/A
+
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
@@ -47,6 +51,7 @@
    - [ ] Backend része PHP legyen
    - [ ] Űrlap mezők validálása
    - [ ] 'Termékek hozzáadása' funkció megvalósítása
+  
 ### 4. 1 Funkcionális követelmények
 
 | ID | Megnevezés | Leírás |
@@ -63,6 +68,7 @@
    * PC
    * Tablet
    * Mobiltelefon
+  
 ## 5. Funkcionális terv
 
 ### 5.1 Rendszerszereplők
@@ -71,6 +77,7 @@
 
 ## 6. Fizikai környezet
    Lokális webszerver (Apache)
+
 ### 6.1 Hardver topológia
 
 ### 6.2 Fizikai alrendszerek
@@ -80,18 +87,22 @@
    * Leíró nyelvek: HTML, CSS + Bootstrap
    * Text Editor: Visual Studio Code, Vim
    * Debugoláshoz: Google Chrome/Mozilla Firefox/Microsoft Edge/Opera fejlesztői konzol
+  
 ## 7. Architekturális terv
 
 ### 7.1 Webszerver
    Apache (Xampp-al futtatva)
+
 ### 7.2 Adatbázis rendszer
    Relációs adatbázis - MySQL
+
 ### 7.3 A program elérése, kezelése
    Webszerveren (Apache)
+
 ## 8. Adatbázis terv
-   * Users tábla
-   * Product tábla (ennek a nevét később lehet, megváltoztatjuk)  
-   *A többi még tervezés alatt...*
+   
+   ![Image](database%20diagram.jpg)
+
 ## 9. Implementációs terv
 
 ## 10. Tesztterv
