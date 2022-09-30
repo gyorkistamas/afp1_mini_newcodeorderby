@@ -8,8 +8,8 @@
     <title>Autentikáció</title>
     <link rel="stylesheet" type="text/css" href="bootstrap,jquery/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/auth.css">
-    <script href="bootstrap,jquery/jquery-3.6.1.min.js"></script>
-    <script href="bootstrap,jquery/bootstrap.min.js"></script>
+    <script src="bootstrap,jquery/jquery-3.6.1.min.js"></script>
+    <script src="bootstrap,jquery/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <!-- Bejelentkezési űrlap -->
             <div class="col-lg-5 col-md-12 mb-5">
                 <form method="POST" action="" id="login">
-                    <div class="container">
+                    <div class="container p-5 cardpart text-white">
 
                     <div class="row">
                         <div class="col-12">
@@ -32,7 +32,7 @@
                     </div>
 
                         <div class="row mb-3">
-                            <div class="form-floating col-12">
+                            <div class="form-floating col-12 text-black">
                                 <input type="email" class="form-control" id="emailForLogin" name="loginEmail" placeholder="test@email.com"
                                     required>
                                 <label for="emailForLogin">E-mail cím*</label>
@@ -40,16 +40,16 @@
                         </div>
 
                         <div class="row">
-                            <div class="form-floating col-12">
+                            <div class="form-floating col-12 text-black">
                                 <input type="password" class="form-control" name="loginPass" id="passwordForLogin"
                                     placeholder="badpassword" required>
                                 <label for="passwordForLogin">Jelszó*</label>
                             </div>
                         </div>
 
-                        <div class="row mt-5">
+                        <div class="row mt-3">
                             <div class="col-12 mb-2">
-                                <button type="submit" class="btn btn-primary">Bejelentkezés</button></div>
+                                <button type="submit" class="btn btn-success">Bejelentkezés</button></div>
                             <div class="col-lg-2"></div>
                         </div>
 
@@ -62,7 +62,7 @@
             <!-- Regisztrációs űrlap -->
             <div class="col-lg-5 col-md-12">
                 <form method="POST" action="" id="register">
-                    <div class="container">
+                    <div class="container p-5 cardpart text-white">
 
                     <div class="row">
                         <div class="col-12">
@@ -73,13 +73,13 @@
 
                         <!-- Megjelenő név -->
                         <div class="row">
-                            <div class="col-12 form-floating mb-3">
+                            <div class="col-12 form-floating mb-3 text-black">
                                 <input type="text" class="form-control" name="displayName" id="nameForRegister" placeholder="Teszt Elek">
                                 <label for="nameForRegister">Megjelenő név</label>
                             </div>
 
                             <!-- E-mail cím -->
-                            <div class="col-12 form-floating mb-3">
+                            <div class="col-12 form-floating mb-3 text-black">
                                 <input type="email" class="form-control" name="regEmail" id="emailForRegister"
                                     placeholder="asd@asd.com">
                                 <label for="nameForRegister">E-mail cím</label>
@@ -89,7 +89,7 @@
 
                         <!-- Jelszó egyszer -->
                         <div class="row mb-3">
-                            <div class="col-lg-5 col-12 form-floating">
+                            <div class="col-lg-5 col-12 form-floating text-black">
                                 <input type="password" class="form-control" name="pass1" id="pass1ForRegister" placeholder="asd123">
                                 <label for="pass1ForRegister">Jelszó</label>
                             </div>
@@ -98,15 +98,15 @@
 
 
                             <!-- Jelszó kétszer -->
-                            <div class="col-lg-5 col-12 form-floating">
-                                <input type="password" class="form-control" name="pass2"id="pass2ForRegister" placeholder="asd123">
+                            <div class="col-lg-5 col-12 form-floating text-black">
+                                <input type="password" class="form-control" name="pass2" id="pass2ForRegister" placeholder="asd123">
                                 <label for="pass2ForRegister">Jelszó megint</label>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Regisztráció</button>
+                                <button type="submit" class="btn btn-success">Regisztráció</button>
                             </div>
                         </div>
                     </div>
