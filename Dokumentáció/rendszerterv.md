@@ -89,6 +89,9 @@
    * Debugoláshoz: Google Chrome/Mozilla Firefox/Microsoft Edge/Opera fejlesztői konzol
   
 ## 7. Architekturális terv
+   A szerveroldali funkcionalitást PHP-ban valósítottuk meg.  
+   A Backend képes kommunkálni egy MySQL adatbázissal.  
+   A Frontend részén űrlapos mezőkkel kezeltünk adatbázis műveleteket és oldalak közötti navigációt.
 
 ### 7.1 Webszerver
    Apache (Xampp-al futtatva)
