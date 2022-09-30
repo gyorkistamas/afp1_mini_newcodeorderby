@@ -56,18 +56,19 @@
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K1 | ... | ... |
+| K1 | Regisztrációs lehetőség | Felhasználói fiók létrehozására való opció |
+| K2 | Bejelentkezés | A korábban már regisztrált felhasználók be tudjanak jelentkezni az oldalra |
+| K3 | Szerepkörök | Felhasználók elkülönítése jogosultságaik alapján |
+| K4 | Adatbázis | Relációs adatbázis (MySQL) alkalmazása az oldal fontosabb adatainak tárolására (Felhasználók, Termékek, Értékelések)
 
 ### 4.2 Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K4 | ... | ... |
+| K1 | --- | --- |
 
 ### 4.3 Támogatott eszközök
    * PC
-   * Tablet
-   * Mobiltelefon
   
 ## 5. Funkcionális terv
 
