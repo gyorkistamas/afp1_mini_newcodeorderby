@@ -65,7 +65,8 @@
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K1 | --- | --- |
+| K1 | Felhasználói fiók szükségessége | Fiók nélkül ne lehessen értékelést írni, terméket felvinni az oldalra/törölni az oldalról |
+| K2 | Jogosultásgok | Egy közönséges felhasználó kevesebb dologhoz férhessen hozzá, mint egy admin joggal rendelkező. Csak az admin tudjon értékeléseket törölni. |
 
 ### 4.3 Támogatott eszközök
    * PC
