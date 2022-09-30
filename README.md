@@ -5,3 +5,13 @@
 - Karácsony Balázs
 - Kovács Dávid
 - Györkis Tamás
+
+### Seniorok:
+- Matuch Richárd
+- Banyik Nándor
+
+---
+
+## Rövid leírás
+
+Web alapú alkalmazás, ahol lehetőség van termékek értékelésére.
