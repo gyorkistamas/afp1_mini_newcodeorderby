@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/auth.css">
     <script src="bootstrap,jquery/jquery-3.6.1.min.js"></script>
     <script src="bootstrap,jquery/bootstrap.min.js"></script>
+    <script src="js/auth.js" defer></script>
 </head>
 
 <body>
@@ -74,7 +75,7 @@
                         <!-- Megjelenő név -->
                         <div class="row">
                             <div class="col-12 form-floating mb-3 text-black">
-                                <input type="text" class="form-control" name="displayName" id="nameForRegister" placeholder="Teszt Elek" required>
+                                <input type="text" class="form-control" name="displayName" id="nameForRegister" placeholder="Teszt Elek" autocomplete="name" required>
                                 <label for="nameForRegister">Megjelenő név*</label>
                             </div>
 
@@ -89,9 +90,12 @@
 
                         <!-- Jelszó egyszer -->
                         <div class="row mb-3">
-                            <div class="col-lg-5 col-12 form-floating text-black">
+                            <div class="col-lg-5 col-12 mb-3 form-floating text-black">
                                 <input type="password" class="form-control" name="pass1" id="pass1ForRegister" placeholder="asd123" required>
                                 <label for="pass1ForRegister">Jelszó*</label>
+                                <div class="invalid" id="invalidPass" hidden>
+                                    A jelszónak legalább 8 karakter hosszúnak kell lennie!
+                                </div>
                             </div>
 
                             <div class="col-lg-2"></div>
@@ -101,12 +105,15 @@
                             <div class="col-lg-5 col-12 form-floating text-black">
                                 <input type="password" class="form-control" name="pass2" id="pass2ForRegister" placeholder="asd123" required>
                                 <label for="pass2ForRegister">Jelszó megint*</label>
+                                <div class="invalid" id="passNotMatch" hidden>
+                                    A két jelszó nem egyezik meg!
+                                </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-success">Regisztráció</button>
+                                <button type="submit" class="btn btn-success" id="registerButton">Regisztráció</button>
                             </div>
                         </div>
                     </div>
