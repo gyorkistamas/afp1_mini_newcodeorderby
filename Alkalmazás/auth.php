@@ -23,19 +23,19 @@
             <!-- Bejelentkezési űrlap -->
             <div class="col-lg-5 col-md-12 mb-5">
                 <form method="POST" action="logic/login.php" id="login">
-                    <div class="container p-5 cardpart text-white">
+                    <div class="container p-4 cardpart text-white">
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Bejelentkezés</h1>
-                            <hr>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Bejelentkezés</h1>
+                                <hr>
+                            </div>
                         </div>
-                    </div>
 
                         <div class="row mb-3">
-                             <div class="form-floating col-12 text-black">
-                                <input type="email" class="form-control" id="emailForLogin" name="loginEmail" placeholder="test@email.com"
-                                    required>
+                            <div class="form-floating col-12 text-black">
+                                <input type="email" class="form-control" id="emailForLogin" name="loginEmail"
+                                    placeholder="test@email.com" required>
                                 <label for="emailForLogin">E-mail cím*</label>
                             </div>
                         </div>
@@ -54,6 +54,7 @@
                             <div class="col-lg-2"></div>
                         </div>
 
+                        <span class="fs-6">*: a mező kitöltése kötelező</span>
                     </div>
                 </form>
             </div>
@@ -63,19 +64,20 @@
             <!-- Regisztrációs űrlap -->
             <div class="col-lg-5 col-md-12">
                 <form method="POST" action="logic/register.php" id="register">
-                    <div class="container p-5 cardpart text-white">
+                    <div class="container p-4 cardpart text-white">
 
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Regisztráció</h1>
-                            <hr>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Regisztráció</h1>
+                                <hr>
+                            </div>
                         </div>
-                    </div>
 
                         <!-- Megjelenő név -->
                         <div class="row">
                             <div class="col-12 form-floating mb-3 text-black">
-                                <input type="text" class="form-control" name="displayName" id="nameForRegister" placeholder="Teszt Elek" autocomplete="name" required>
+                                <input type="text" class="form-control" name="displayName" id="nameForRegister"
+                                    placeholder="Teszt Elek" autocomplete="name" required>
                                 <label for="nameForRegister">Megjelenő név*</label>
                             </div>
 
@@ -91,7 +93,8 @@
                         <!-- Jelszó egyszer -->
                         <div class="row mb-3">
                             <div class="col-lg-5 col-12 mb-3 form-floating text-black">
-                                <input type="password" class="form-control" name="pass1" id="pass1ForRegister" placeholder="asd123" required>
+                                <input type="password" class="form-control" name="pass1" id="pass1ForRegister"
+                                    placeholder="asd123" required>
                                 <label for="pass1ForRegister">Jelszó*</label>
                                 <div class="invalid" id="invalidPass" hidden>
                                     A jelszónak legalább 8 karakter hosszúnak kell lennie!
@@ -103,7 +106,8 @@
 
                             <!-- Jelszó kétszer -->
                             <div class="col-lg-5 col-12 form-floating text-black">
-                                <input type="password" class="form-control" name="pass2" id="pass2ForRegister" placeholder="asd123" required>
+                                <input type="password" class="form-control" name="pass2" id="pass2ForRegister"
+                                    placeholder="asd123" required>
                                 <label for="pass2ForRegister">Jelszó megint*</label>
                                 <div class="invalid" id="passNotMatch" hidden>
                                     A két jelszó nem egyezik meg!
@@ -116,6 +120,9 @@
                                 <button type="submit" class="btn btn-success" id="registerButton">Regisztráció</button>
                             </div>
                         </div>
+
+                        <span class="fs-6">*: a mező kitöltése kötelező</span>
+
                     </div>
                 </form>
             </div>
