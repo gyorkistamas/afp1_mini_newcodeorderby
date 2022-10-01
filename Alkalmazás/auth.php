@@ -74,15 +74,15 @@
                         <!-- Megjelenő név -->
                         <div class="row">
                             <div class="col-12 form-floating mb-3 text-black">
-                                <input type="text" class="form-control" name="displayName" id="nameForRegister" placeholder="Teszt Elek">
-                                <label for="nameForRegister">Megjelenő név</label>
+                                <input type="text" class="form-control" name="displayName" id="nameForRegister" placeholder="Teszt Elek" required>
+                                <label for="nameForRegister">Megjelenő név*</label>
                             </div>
 
                             <!-- E-mail cím -->
-                            <div class="col-12 form-floating mb-3">
+                            <div class="col-12 form-floating mb-3 text-black">
                                 <input type="email" class="form-control" name="regEmail" id="emailForRegister"
-                                    placeholder="asd@asd.com">
-                                <label for="nameForRegister">E-mail cím</label>
+                                    placeholder="asd@asd.com" required>
+                                <label for="nameForRegister">E-mail cím*</label>
                             </div>
                         </div>
 
@@ -90,8 +90,8 @@
                         <!-- Jelszó egyszer -->
                         <div class="row mb-3">
                             <div class="col-lg-5 col-12 form-floating text-black">
-                                <input type="password" class="form-control" name="pass1" id="pass1ForRegister" placeholder="asd123">
-                                <label for="pass1ForRegister">Jelszó</label>
+                                <input type="password" class="form-control" name="pass1" id="pass1ForRegister" placeholder="asd123" required>
+                                <label for="pass1ForRegister">Jelszó*</label>
                             </div>
 
                             <div class="col-lg-2"></div>
@@ -99,8 +99,8 @@
 
                             <!-- Jelszó kétszer -->
                             <div class="col-lg-5 col-12 form-floating text-black">
-                                <input type="password" class="form-control" name="pass2" id="pass2ForRegister" placeholder="asd123">
-                                <label for="pass2ForRegister">Jelszó megint</label>
+                                <input type="password" class="form-control" name="pass2" id="pass2ForRegister" placeholder="asd123" required>
+                                <label for="pass2ForRegister">Jelszó megint*</label>
                             </div>
                         </div>
 
