@@ -18,11 +18,13 @@
 
             //Megnézzük, van-e ilyen felhasználó már:
 
-            // $con = connect('dbname', 'root', '', 3306);
+            $con = connect('review site', 'root', '', 3306);
 
-            // $query = "";
-            // $result = mysqli_query($con, $query);
-            $results = /*mysqli_fetch_all($result);*/ null;
+            $query = "SELECT * FROM user WHERE name LIKE '".$displayName."' AND email LIKE '".$regEmail."'";
+            $result = mysqli_query($con, $query);
+            $results = mysqli_fetch_all($result);
+
+            //var_dump($results);
 
             if ($results != null) 
             {
@@ -32,8 +34,8 @@
             {
                 //Felhasználó adatainak feltöltése az adatbázisba:
 
-                // $insertUser = "";
-                // $operation = mysqli_query($con, $insertUser);
+                $insertUser = "INSERT INTO user (name, email, password, moderator) VALUES ('".$displayName."', '".$regEmail."', '".$pass."', 0)";
+                $operation = mysqli_query($con, $insertUser);
 
                 print("Regisztráció...");
             }
