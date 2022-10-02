@@ -31,12 +31,12 @@
             $password = $aggregates[2];
             $role = $aggregates[3] == 0 ? "User" : "Moderator";
 
-            //Felhasználó adatainak eltárolása egy tömbben és annak továbbadása Session változóként:
+            //Felhasználó adatainak eltárolása egy tömbben és az továbbadása Session változóként:
             
             $UserData = array('Name' => $name, 'Email' => $email, 'Password' => $password, 'Role' => $role);
             session_start();
             $_SESSION['UserData'] = $UserData;
-            //header("Location: ../index.php");
+            header("Location: ../index.php");
         }
 
     }
