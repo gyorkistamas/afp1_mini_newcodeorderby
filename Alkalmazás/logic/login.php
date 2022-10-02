@@ -10,7 +10,7 @@
         //Felhasználó lekérdezése az adatbázisból:
 
         $con = connect('review site', 'root', '', 3306);
-        $query = "SELECT * FROM user WHERE email LIKE '".$loginEmail."'";
+        $query = "SELECT * FROM user WHERE email LIKE '".$loginEmail."' AND password LIKE '".$loginPass."'";
         $result = mysqli_query($con, $query);
         $results = mysqli_fetch_all($result);
 
