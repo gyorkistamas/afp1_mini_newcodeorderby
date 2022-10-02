@@ -9,6 +9,7 @@ function isLoggedIn(): bool {
 $status = isLoggedIn();
 
 if ($status) {
+    session_destroy();
     header("Location: ./auth.php");
 }
 
