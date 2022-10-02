@@ -2,6 +2,7 @@
 
     require '../dbcon/dbms.php';
 
+    // Input mezők vizsgálata, aszerint, hogy lett beléjük írva:
 
     if ( isset($_POST['displayName']) && !empty($_POST['displayName']) && 
          isset($_POST['regEmail']) && !empty($_POST['regEmail']) && 
@@ -14,6 +15,8 @@
 
         if ($_POST['pass1'] == $_POST['pass2']) 
         {
+            //MD5-ös titkosított jelszó eltárolása:
+            
             $pass = md5($_POST['pass1']);
 
             //Megnézzük, van-e ilyen felhasználó már:
@@ -23,8 +26,6 @@
             $query = "SELECT * FROM user WHERE name LIKE '".$displayName."' AND email LIKE '".$regEmail."'";
             $result = mysqli_query($con, $query);
             $results = mysqli_fetch_all($result);
-
-            //var_dump($results);
 
             if ($results != null) 
             {
