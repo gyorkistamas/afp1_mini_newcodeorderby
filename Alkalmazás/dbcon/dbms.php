@@ -1,14 +1,9 @@
 <?php
 
-function connect($dbName, $userName, $pass, $port) 
+function connect($dbname, $username, $password, $port)
 {
-    $connection = mysqli_connect('localhost', $userName, $pass, $dbName, $port);
-    /*
-    if (!isset($connection)) {
-        die("Hiba:".mysqli_errno($connection));
-    }
-    */
-    return $connection;
+    $con = mysqli_connect('localhost', $username, $password, $dbname, $port);
+    return $con;
 }
 
 ?>
