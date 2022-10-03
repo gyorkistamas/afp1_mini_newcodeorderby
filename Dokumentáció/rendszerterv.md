@@ -1,6 +1,14 @@
 # Rendszerterv
 ## 1. A rendszer célja
-   Termék értékelő weblap háttérben működő adatbázissal, felhasználó rendszerrel, termék feltöltése és felhasználó regisztrálása funkciókkal PHP-ban (Backend) és HTML + CSS + JS-ben (Frontend) megvalósítva.
+   Termék értékelő weblap háttérben működő adatbázissal, felhasználó rendszerrel, termék feltöltése és felhasználó regisztrálása funkciókkal PHP-ban (Backend) és HTML + CSS + JS-ben (Frontend) megvalósítva.  
+   Az oldalon lehetőség adódik felhasználói fiók létrehozására, a fiókkal rendelkező felhasználóknak bejelentkezésre.  
+   Jogosultsági rendszer is működik a weboldalon. Két fajta felhasználó lehetséges (User és Moderator), akiknek hatáskörük az oldalon lévő dolgokra eltérő.
+   Regisztrálni csak is közönséges felhasználót (User) lehet, akinek korlátozott hozzáférése van az oldalon.  
+   Moderátorként nem lehet regisztrálni az oldalon!!!
+   A egyszerű/közönséges felhasználónak lehetősége van termékeket feltölteni az webes felületre, a már létezőekhez értékelést írni.  
+   Minden amit a normál felhasználó tud, azt tudja a Moderátor is, csak neki a hatásköre kiegészül azzal, hogy tud értékeléseket törölni.  
+   Mi számít értékelésnek az oldalon? A termékek alatt szöveges formában lehet kifejezniük a felhasználóknak az elégedettségüket az adott termék iránt.
+   Bejelentkezés nélkül is látogatható az oldal. Ekkor egy lista tekinthető meg az eddig feltöltött termékekről.
 
 ## 2. Projektterv
    PHP, HTML + CSS + JS projekt, ahol lehetőség van termékek kilistázására, felhasználók létrehozására, termékek létrehozása, termékekhez értékelések írására, termékek adatainak szerkesztésére.
@@ -41,7 +49,7 @@
      * Felhasználó törlése, jogainak módosítása
   
 ### 3.1 Üzleti szereplők
-   * Admin (Adminisztrátor)
+   * Moderator (Moderátor)
    * User (Felhasználó)
 
 ## 4. Követelmények
@@ -57,15 +65,17 @@
 | --- | --- | --- |
 | K1 | Regisztrációs lehetőség | Felhasználói fiók létrehozására való opció |
 | K2 | Bejelentkezés | A korábban már regisztrált felhasználók be tudjanak jelentkezni az oldalra |
-| K3 | Szerepkörök | Felhasználók elkülönítése jogosultságaik alapján |
-| K4 | Adatbázis | Relációs adatbázis (MySQL) alkalmazása az oldal fontosabb adatainak tárolására (Felhasználók, Termékek, Értékelések)
+| K3 | Szerepkörök | Felhasználók elkülönülnek jogosultságaik alapján |
+| K4 | Adatbázis | Relációs adatbázis (MySQL) alkalmazása az oldal fontosabb adatainak tárolására (Felhasználók, Termékek, Értékelések) |
+| K5 | Termékek feltöltése | Minden felhasználónak legyen lehetősége egy termék adatainak felvitelére a weblap mögött működő adatbázisba, az így felvitt termék megjelenik majd a webes felületen is |
+| K6 | Értékelés, véleménye írása | A felhasználók elmondhatják véleményüket egy már feltöltött termék iránt |
 
 ### 4.2 Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K1 | Felhasználói fiók szükségessége | Fiók nélkül ne lehessen értékelést írni, terméket felvinni az oldalra/törölni az oldalról |
-| K2 | Jogosultásgok | Egy közönséges felhasználó kevesebb dologhoz férhessen hozzá, mint egy admin joggal rendelkező. Csak az admin tudjon értékeléseket törölni. |
+| K1 | Felhasználói fiók szükségessége | Fiók nélkül ne lehessen értékelést írni/törölni, terméket felvinni az oldalra |
+| K2 | Jogosultásgok | Egy közönséges felhasználó kevesebb dologhoz férhessen hozzá, mint egy moderátor joggal rendelkező. Csak a moderátor tudjon értékeléseket törölni. |
 | K3 | Adatbázis rendezettsége | Táblákra és azokon belül mezőkre szedett adatok az adatbázisban. |
 
 ### 4.3 Támogatott eszközök
@@ -73,7 +83,7 @@
   
 ## 5. Funkcionális terv
 Rendszerszereplők:
-   * Admin (Adminisztrátor)
+   * Moderator (Moderátor)
    * User (Felhasználó)
 
 ## 6. Fizikai környezet
@@ -244,7 +254,7 @@ Rendszerszereplők:
 ## 9. Implementációs terv
    A weboldal HTML, CSS, JS, PHP nyelveken írtuk.  
    A különböző nyelvek kódjait elszeparáltuk egymástól külön mappákba, ebből kifolyólag átláthatóbb lesz az alkalmazás szerkezete.
-   A forráskódban angol elnevezések használatában döntöttünk, míg a program könyvtár szerkezetében maradtunk a magyarnál, tehát a változók és metódusok neveit angolul, a mappák neveit magyarul implementáltuk.  
+   A forráskód és alkönyvtárak angol elnevezéseinek használatában döntöttünk, míg a program könyvtár nevénél maradtunk a magyarnál, tehát a változók és metódusok neveit, továbbá az almappák neveit angolul implementáltuk.
    Törekedtünk arra, hogy az oldalon fellelhető adatok nagy részét MySQL adatbázisban tároljuk.
 
 ## 10. Tesztterv
@@ -272,8 +282,9 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 ... | ... | ... | ... | ...
 
 ## 11. Telepítési terv
-   Windows operációs rendszer használata esetén szükséges hozzá a Xampp nevű alkalmazás.  
-   Az alkalmazás fájljait tartalmazó mappát be kell másolni a xampp\htdocs mappába és egy tetszőleges böngészőben a localhost-hoz navigálni.
+   Windows és Linux operációs rendszer használata esetén szükséges hozzá a Xampp nevű alkalmazás.  
+   Windows-nál az alkalmazás fájljait tartalmazó mappát be kell másolni a xampp\htdocs mappába, elindítani a grafikus alkalmazásban az apache és mysql szolgáltatásokat és egy tetszőleges böngészőben a localhost-hoz navigálni.  
+   Míg Linuxnál a /opt/lampp/htdocs mappába kell másolni az alkalmazás fájljait. A sudo /opt/lampp/lampp start parancs kiadása után az alkalmazás oldala megtekinthető egy tetszőleges böngészőben a localhost címen.
 
 ## 12. Karbantartási terv
 
