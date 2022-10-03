@@ -10,7 +10,7 @@ A jelenlegi helyzet alapján nincs lehetőség a termékek értékelésére, íg
 
 ## 3. Vágyálomrendszer
 
-Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regisztráció és bejelentkezés után termékek hozzáadására, illetve ezen termékek értékelésére. Az alkalmazás tulajdonosai tudják ezeket moderálni, illetve az értékeléseket (review-okat) bárki meg is tekintheti.
+Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regisztráció és bejelentkezés után termékek hozzáadására, illetve ezen termékek értékelésére. Az értékeléseket bárki megtekintheti, ezzel is ösztönözve más potenciális vevőket a vásárlásra. Az alkalmazás tulajdonosai képesek az értékelések moderálására, ha az valamilyen vulgáris kifejezést, vagy egyéb, nem megengedett részleteket tartalmaz. A felhasználók név, e-mail cím és jelszó megadása után regisztrálhatnak, az itt megadott név jelenik meg értékeléseiknél. A termékek, és az értékelések is publikusan megtekinthetők, a felhasználó fiók létrehozása ezeknek a hozzáadásához szükséges.
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 A jelenlegi rendszer nem ad lehetőséget a vágyálomrendszerben megjelölt követelményekre, esetleg az értékelések szóban történő közlésére.
