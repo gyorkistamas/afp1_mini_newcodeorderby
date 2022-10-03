@@ -107,10 +107,6 @@ Rendszerszereplők:
       -- phpMyAdmin SQL Dump
       -- version 5.1.1
       -- https://www.phpmyadmin.net/
-      --
-      -- Gép: 127.0.0.1
-      -- Létrehozás ideje: 2022. Okt 01. 11:20
-      -- Kiszolgáló verziója: 10.4.22-MariaDB
       -- PHP verzió: 8.1.2
 
       SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
