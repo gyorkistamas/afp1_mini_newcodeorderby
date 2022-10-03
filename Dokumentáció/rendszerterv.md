@@ -40,13 +40,17 @@
    * Prototípus átadása
 
 ## 3. Üzleti folyamatok modellje
-   * 1. Felhasználói fiók létrehozása
-     * Admin és Felhasználó jogosultsági körök
-   * 2. Termékek hozzáadasa az adatbázis megfelelő táblájába
-     * Termekek adatainak módosítása és törlése
-   * 3. Termékek értékelése funkció
-   * 4. Felhasználók kezelése
-     * Felhasználó törlése, jogainak módosítása
+   * 1. Felhasználói fiók létrehozása:
+     * Felhasználónév, Email cím, Jelszó kétszeri megadásával.
+   * 2. Bejelentkezés:
+     * Email cím + Jelszó megadásával.
+   * 3. User hatásköre:
+     * Termék hozzáadása
+     * Értékelések/vélemények írása
+   * 4. Mod. hatásköre:
+     * Termék hozzáadása:
+     * Értékelések/vélemények írása
+     * Értékelések/véleméyek törlése
   
 ### 3.1 Üzleti szereplők
    * Moderator (Moderátor)
