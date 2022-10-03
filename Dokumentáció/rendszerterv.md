@@ -66,6 +66,7 @@
 | --- | --- | --- |
 | K1 | Felhasználói fiók szükségessége | Fiók nélkül ne lehessen értékelést írni, terméket felvinni az oldalra/törölni az oldalról |
 | K2 | Jogosultásgok | Egy közönséges felhasználó kevesebb dologhoz férhessen hozzá, mint egy admin joggal rendelkező. Csak az admin tudjon értékeléseket törölni. |
+| K3 | Adatbázis rendezettsége | Táblákra és azokon belül mezőkre szedett adatok az adatbázisban. |
 
 ### 4.3 Támogatott eszközök
    * PC Windows vagy Linux vagy MacOS operációs rendszerrel
@@ -88,6 +89,7 @@ Rendszerszereplők:
    A szerveroldali funkcionalitást PHP-ban valósítottuk meg.  
    A Backend képes kommunkálni egy MySQL adatbázissal.  
    A Frontend részén űrlapos mezőkkel kezeltünk adatbázis műveleteket és oldalak közötti navigációt.
+   Az alkalmazást webböngészőn keresztül lehet elérni.
 
 ### 7.1 Webszerver
    Apache (Xampp-al futtatva)
