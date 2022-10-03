@@ -68,7 +68,7 @@
 | K3 | Szerepkörök | Felhasználók elkülönülnek jogosultságaik alapján |
 | K4 | Adatbázis | Relációs adatbázis (MySQL) alkalmazása az oldal fontosabb adatainak tárolására (Felhasználók, Termékek, Értékelések) |
 | K5 | Termékek feltöltése | Minden felhasználónak legyen lehetősége egy termék adatainak felvitelére a weblap mögött működő adatbázisba, az így felvitt termék megjelenik majd a webes felületen is |
-| K6 | Értékelés, véleménye írása | A felhasználók elmondhatják véleményüket egy már feltöltött termék iránt |
+| K6 | Értékelés, vélemény írása | A felhasználók elmondhatják véleményüket egy már feltöltött termék iránt |
 
 ### 4.2 Nemfunkcionális követelmények
 
