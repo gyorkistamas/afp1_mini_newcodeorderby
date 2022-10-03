@@ -11,7 +11,7 @@
    Bejelentkezés nélkül is látogatható az oldal. Ekkor egy lista tekinthető meg az eddig feltöltött termékekről.
 
 ## 2. Projektterv
-   PHP, HTML + CSS + JS projekt, ahol lehetőség van termékek kilistázására, felhasználók létrehozására, termékek létrehozása, termékekhez értékelések írására, termékek adatainak szerkesztésére.
+   PHP, HTML + CSS + JS projekt, ahol lehetőség van termékek kilistázására, felhasználók létrehozására, termékek létrehozására, termékekhez értékelések írására.
    Az oldal támogassa a reszponzivitást.
 
 ### 2.1 Projektszerepkörök, felelőségek:
