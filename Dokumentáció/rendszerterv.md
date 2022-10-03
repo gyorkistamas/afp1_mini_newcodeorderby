@@ -48,7 +48,7 @@
      * Termék hozzáadása
      * Értékelések/vélemények írása
    * 4. Mod. hatásköre:
-     * Termék hozzáadása:
+     * Termék hozzáadása
      * Értékelések/vélemények írása
      * Értékelések/véleméyek törlése
   
