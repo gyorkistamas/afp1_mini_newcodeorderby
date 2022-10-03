@@ -1,9 +1,9 @@
 # Rendszerterv
 ## 1. A rendszer célja
    Termék értékelő weblap háttérben működő adatbázissal, felhasználó rendszerrel, termék feltöltése és felhasználó regisztrálása funkciókkal PHP-ban (Backend) és HTML + CSS + JS-ben (Frontend) megvalósítva.  
-   Az oldalon lehetőség adódik felhasználói fiók létrehozására, a fiókkal rendelkező felhasználóknak bejelentkezésre.  
+   Az oldalon lehetőség adódik felhasználói fiók létrehozására, a fiókkal rendelkező felhasználóknak email és jelszó megadásával bejelentkezésre.  
    Jogosultsági rendszer is működik a weboldalon. Két fajta felhasználó lehetséges (User és Moderator), akiknek hatáskörük az oldalon lévő dolgokra eltérő.
-   Regisztrálni csak is közönséges felhasználót (User) lehet, akinek korlátozott hozzáférése van az oldalon.  
+   Regisztrálni csak is közönséges felhasználót (User) lehet email cím, felhasználónév, jelszó (2X) megadásával, akinek korlátozott hozzáférése van az oldalon.  
    Moderátorként nem lehet regisztrálni az oldalon!!!
    A egyszerű/közönséges felhasználónak lehetősége van termékeket feltölteni az webes felületre, a már létezőekhez értékelést írni.  
    Minden amit a normál felhasználó tud, azt tudja a Moderátor is, csak neki a hatásköre kiegészül azzal, hogy tud értékeléseket törölni.  
