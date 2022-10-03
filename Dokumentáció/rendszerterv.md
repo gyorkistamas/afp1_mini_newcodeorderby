@@ -70,8 +70,7 @@
    * PC Windows vagy Linux vagy MacOS operációs rendszerrel
   
 ## 5. Funkcionális terv
-
-### 5.1 Rendszerszereplők
+Rendszerszereplők:
    * Admin (Adminisztrátor)
    * User (Felhasználó)
 
@@ -279,10 +278,9 @@ például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával 
 
 ## 12. Karbantartási terv
 
-Fontos ellenőrizni:
-...
-
 Figyelembe kell venni a felhasználó által jött visszajelzést is a programmal kapcsolatban.
 Ha hibát talált, mielőbb orvosolni kell, lehet az:
 *	Működéssel kapcsolatos
 *	Kinézet, dizájnnal kapcsolatos
+
+Ezekkel kapcsolatban egyelőre emailben tudja felvenni velünk a kapcsolatot.
