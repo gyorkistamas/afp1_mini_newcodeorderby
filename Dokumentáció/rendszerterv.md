@@ -8,8 +8,8 @@
 
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters: Banyik Nándor, Matuch Richárd
-   * Product owner: N/A
-   * Üzleti szereplő: N/A
+   * Product owner: Matuch Richárd
+   * Üzleti szereplő: Banyik Nándor
      
 ### 2.2 Projektmunkások és felelőségek:
    * Frontend: Kovács Dávid
@@ -41,7 +41,8 @@
      * Felhasználó törlése, jogainak módosítása
   
 ### 3.1 Üzleti szereplők
-   N/A
+   * Admin (Adminisztrátor)
+   * User (Felhasználó)
 
 ## 4. Követelmények
    - [ ] Reszponzív, dinamikus weboldal
