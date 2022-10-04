@@ -1,5 +1,5 @@
 .cardpart {
-	background-color: rgba(0, 0, 0, 80%);
+	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 }
 
@@ -9,4 +9,10 @@
 
 label {
 	padding-left: 20px !important;
+}
+
+body {
+	background-image: url("../imgs/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }

@@ -18,7 +18,13 @@
     <!-- Ide majd a menüsor -->
 
 
-    <div class="container my-3">
+    <!-- Menüsör placeholder -->
+    <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">
+
+    </div>
+
+
+    <div class="container my-5">
         <div class="row">
             <!-- Bejelentkezési űrlap -->
             <div class="col-lg-5 col-md-12 mb-5">
