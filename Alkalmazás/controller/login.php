@@ -16,7 +16,8 @@
 
         if ($results == null) 
         {
-            print("Ez a felhasználó nem létezik");
+            //print("Ez a felhasználó nem létezik");
+            header("Location: ../view/loginfeedback.php?error=Ez a felhasználó nem létezik!");
         }
         else 
         {
@@ -42,7 +43,8 @@
     }
     else
     {
-        print("Nem töltöttél ki minden mezőt!");
+        //print("Nem töltöttél ki minden mezőt!");
+        header("Location: ../view/loginfeedback.php?error=Nem töltött ki minden mezőt!");
     }
 
    

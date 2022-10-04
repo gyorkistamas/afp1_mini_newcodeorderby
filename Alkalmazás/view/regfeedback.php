@@ -1,7 +1,11 @@
 <?php
 
+// Ha sikeres a kapott érték beállítjuk true-ra, ha nem false-ra,
+// ha nem kapott értéket, akkor is false-ra.
 $success = isset($_GET['success']) ? ($_GET['success'] == "True" ? True : False) : False;
 
+
+// Ha kapott hibaüzenetet, beállítjuk, ha nem, akkor Ismeretlen hiba lesz az értéke
 $error = isset($_GET['error']) ? $_GET['error'] : "Ismeretlen hiba";
 
 
