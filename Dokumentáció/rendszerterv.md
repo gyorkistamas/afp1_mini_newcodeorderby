@@ -83,6 +83,7 @@
 | K1 | Felhasználói fiók szükségessége | Fiók nélkül ne lehessen értékelést írni/törölni, terméket felvinni az oldalra |
 | K2 | Jogosultásgok | Egy közönséges felhasználó kevesebb dologhoz férhessen hozzá, mint egy moderátor joggal rendelkező. Csak a moderátor tudjon értékeléseket törölni. |
 | K3 | Adatbázis rendezettsége | Táblákra és azokon belül mezőkre szedett adatok az adatbázisban. |
+| K4 | Egyszerű, könnyen átlátható felület (Design) | Felhasználók számára könnyen kezelhető webes felület. | 
 
 ### 4.3 Támogatott eszközök
    * PC Windows vagy Linux vagy MacOS operációs rendszerrel
