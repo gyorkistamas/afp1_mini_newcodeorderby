@@ -25,12 +25,12 @@
 
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| 1 | home.php | főoldal | a köszöntő oldal ami feltünteti a *felhasználó* lehetőségeit (termék böngészés / regisztráció / bejelentkezés) |
-| 2 | item.php | termék_leírás | egy-egy kiválasztott terméket megjelenítő oldal |
-| 3 | auth.php | bejelentkezés | *felhasználó* bejelentkezés kezelő |
-| 4 | auth.php | regisztráció | *felhasználó* regisztráció kezelő |
-| 5 | addProduct.php | Hozzáadás | új termék feltöltésére szolgáló felület |
-| 6 | list.php | böngésző | képes termék lista |
+| FK2 | auth.php | bejelentkezés | *felhasználó* bejelentkezés kezelő |
+| FK3 | auth.php | regisztráció | *felhasználó* regisztráció kezelő |
+| FK4 | addProduct.php | Hozzáadás | új termék feltöltésére szolgáló felület |
+| FK5 | list.php | böngésző | képes termék lista |
+| FK6 | item.php | termék_leírás | egy-egy kiválasztott terméket megjelenítő oldal |
+| FK101 | header.php | fejléc | minden oldal tetején megjelenő egységes menü; feltünteti a lehetőségeit (termék böngészés / regisztráció / bejelentkezés)  |
 
 ## 6. Használati esetek
 1. Ha egy vásárló egy adott terméket már megvásárolt és kipróbálta akkor tapasztalatait megoszthatja az oldalon ezzel segítve a vásárlásra még csak készülő ember társait.
@@ -73,7 +73,12 @@
 
 | Id | Követelmény | Funkció |
 | :---: | --- | --- |
-| K4 | ... | ... |
+| K1 | FK2 | M1 |
+| K2 | FK3 | M2 |
+| K3 | FK4 | M5 |
+| K4 | FK5 | M3 |
+| K5 | FK6 | M4 |
+| k6 | FK101 | N/A |
 
 ## 11 Fogalomszótár
 + **review**: áttekintés idegen szóval
