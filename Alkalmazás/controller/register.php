@@ -29,7 +29,8 @@
 
             if ($results != null) 
             {
-                print("Ez a felhasználó már létezik!");
+                //print("Ez a felhasználó már létezik!");
+                header("Location: ../view/regfeedback.php?success=False&error=Ez a felhasználó létezik.");
             }
             else
             {
@@ -38,17 +39,20 @@
                 $insertUser = "INSERT INTO user (name, email, password, moderator) VALUES ('".$displayName."', '".$regEmail."', '".$pass."', 0)";
                 $operation = mysqli_query($con, $insertUser);
 
-                print("Regisztráció...");
+                //print("Regisztráció...");
+                header("Location: ../view/regfeedback.php?success=True");
             }
         }
         else 
         {
-            print("Nem megfelelő jelszó!");
+            //print("Nem megfelelő jelszó!");
+            header("Location: ../view/regfeedback.php?success=False&error=Nem megfelelő jelszó!");
         }
     }
     else 
     {
-        print("Nem megfelelően töltötted ki a mezőket!");
+        //print("Nem megfelelően töltötted ki a mezőket!");
+        header("Location: ../view/regfeedback.php?succes=False&error=Nem megfelelően kitöltött mezők!");
     }
 
 ?>

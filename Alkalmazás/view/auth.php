@@ -8,6 +8,7 @@
     <title>Autentikáció</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap,jquery/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../styles/auth.css">
+    <link rel="stylesheet" type="text/css" href="../styles/global.css">
     <script src="../bootstrap,jquery/jquery-3.6.1.min.js"></script>
     <script src="../bootstrap,jquery/bootstrap.min.js"></script>
     <script src="../js/auth.js" defer></script>
@@ -16,7 +17,6 @@
 <body>
 
     <!-- Ide majd a menüsor -->
-
 
     <!-- Menüsör placeholder -->
     <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">

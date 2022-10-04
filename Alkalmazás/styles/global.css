@@ -1,0 +1,14 @@
+.cardpart {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+}
+
+body {
+	background-image: url("../imgs/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+html, body {
+	min-height: 100%;
+}
