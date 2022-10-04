@@ -40,17 +40,19 @@
    * Prototípus átadása
 
 ## 3. Üzleti folyamatok modellje
-   * 1. Felhasználói fiók létrehozása:
-     * Felhasználónév, Email cím, Jelszó kétszeri megadásával.
-   * 2. Bejelentkezés:
-     * Email cím + Jelszó megadásával.
-   * 3. User hatásköre:
-     * Termék hozzáadása
-     * Értékelések/vélemények írása
-   * 4. Mod. hatásköre:
-     * Termék hozzáadása
-     * Értékelések/vélemények írása
-     * Értékelések/véleméyek törlése
+   * 1. **Felhasználói fiók létrehozása:**
+     * *Felhasználónév*, *Email cím*, *Jelszó* kétszeri megadásával.
+   * 2. **Bejelentkezés:**
+     * *Email cím* + *Jelszó* megadásával.
+   * 3. **Kijelentkezés:**
+     * A weboldalon a felső részén lesz megtaláható a *Kijelentkezés* gomb.
+   * 4. **User hatásköre:**
+     * __Termék hozzáadása:__ Webes felület segítségével, felvihet adatokat egy termékről.
+     * __Értékelések/vélemények írása:__ Már korábban felvitt termékekhez írhat értékelést, véleményt.
+   * 5. **Mod. hatásköre:**
+     * __Termék hozzáadása:__ Ugyanaz, mint a *User*-nél.
+     * __Értékelések/vélemények írása:__ Ugyanaz, mint a *User*-nél.
+     * __Értékelések/véleméyek törlése:__ A többi felhasználó értékeléseit tudja törölni a termékhez tartozó oldalról.
   
 ### 3.1 Üzleti szereplők
    * Moderator (Moderátor)
