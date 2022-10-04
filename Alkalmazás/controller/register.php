@@ -23,7 +23,7 @@
 
             $con = connect('review site', 'root', '', 3306);
 
-            $query = "SELECT * FROM user WHERE name LIKE '".$displayName."' AND email LIKE '".$regEmail."'";
+            $query = "SELECT * FROM user WHERE email LIKE '".$regEmail."'";
             $result = mysqli_query($con, $query);
             $results = mysqli_fetch_all($result);
 
