@@ -1,6 +1,6 @@
 <?php
 
-    require '../dbcon/dbms.php';
+    require 'dbms.php';
     if ( isset($_POST['loginEmail']) && !empty($_POST['loginEmail']) && 
          isset($_POST['loginPass']) && !empty($_POST['loginPass']) ) 
     {

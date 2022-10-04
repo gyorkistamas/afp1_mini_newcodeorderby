@@ -10,7 +10,7 @@ $status = isLoggedIn();
 
 if ($status) {
     session_destroy();
-    header("Location: ./auth.php");
+    header("Location: ../view/auth.php");
 }
 
 ?>

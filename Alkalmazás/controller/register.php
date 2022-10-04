@@ -1,6 +1,6 @@
 <?php
 
-    require '../dbcon/dbms.php';
+    require 'dbms.php';
 
     // Input mezők vizsgálata, aszerint, hogy lett beléjük írva:
 

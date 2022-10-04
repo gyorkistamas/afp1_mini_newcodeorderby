@@ -1,7 +1,7 @@
 
 <?php
 
-require './userLoggedIn.php';
+require './controller/userLoggedIn.php';
 
 $userData = $_SESSION['UserData'];
 
@@ -10,7 +10,7 @@ $userData = $_SESSION['UserData'];
 if ( isset($_POST['LogoutBtn']) ) {
     unset($_SESSION['UserData']);
     session_destroy();
-    header("Location: ./auth.php");
+    header("Location: ./view/auth.php");
 }
 
 

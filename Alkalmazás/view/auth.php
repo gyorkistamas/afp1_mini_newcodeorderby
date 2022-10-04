@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autentikáció</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap,jquery/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/auth.css">
-    <script src="bootstrap,jquery/jquery-3.6.1.min.js"></script>
-    <script src="bootstrap,jquery/bootstrap.min.js"></script>
-    <script src="js/auth.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../bootstrap,jquery/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/auth.css">
+    <script src="../bootstrap,jquery/jquery-3.6.1.min.js"></script>
+    <script src="../bootstrap,jquery/bootstrap.min.js"></script>
+    <script src="../js/auth.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <div class="row">
             <!-- Bejelentkezési űrlap -->
             <div class="col-lg-5 col-md-12 mb-5">
-                <form method="POST" action="logic/login.php" id="login">
+                <form method="POST" action="../controller/login.php" id="login">
                     <div class="container p-4 cardpart text-white">
 
                         <div class="row">
@@ -63,7 +63,7 @@
 
             <!-- Regisztrációs űrlap -->
             <div class="col-lg-5 col-md-12">
-                <form method="POST" action="logic/register.php" id="register">
+                <form method="POST" action="../controller/register.php" id="register">
                     <div class="container p-4 cardpart text-white">
 
                         <div class="row">
