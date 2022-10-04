@@ -76,16 +76,16 @@
 | K4 | ... | ... |
 
 ## 11 Fogalomszótár
-    + **review**: áttekintés idegen szóval
-    + **profil**: az oldalon való személyazonosság hitelesítéshez szükséges adat halmaz.
-        * részei:
-            - felhasználó név
-            - email cím
-            - jelszó
-            - jogkör
-	+ **jogkör**: egy felhasználható álltal végre hajtható műveletek halmaza.
-		* fajtái:
-			- felhasználói: értékelésírás; saját értékelés módosítás;-i képesség(ek)et ad
-			- moderátori: felhasználó; bármely értékelés módosítás; bármely értékelés módosítás;-i képesség(ek)et ad
-	+ **felhasználó**: olyan személy aki rendelkezik *profil*-lal
-	+ **moderátor**: olyan felhasználó akinek *jogköre* moderátori
++ **review**: áttekintés idegen szóval
++ **profil**: az oldalon való személyazonosság hitelesítéshez szükséges adat halmaz.
+    * részei:
+        - felhasználó név
+        - email cím
+        - jelszó
+        - jogkör
++ **jogkör**: egy felhasználható álltal végre hajtható műveletek halmaza.
+	* fajtái:
+		- felhasználói: értékelésírás; saját értékelés módosítás;-i képesség(ek)et ad
+		- moderátori: felhasználó; bármely értékelés módosítás; bármely értékelés módosítás;-i képesség(ek)et ad
++ **felhasználó**: olyan személy aki rendelkezik *profil*-lal
++ **moderátor**: olyan felhasználó akinek *jogköre* moderátori
