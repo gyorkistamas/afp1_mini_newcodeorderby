@@ -274,7 +274,19 @@ Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
 
  | Teszteset | Elvárt eredmény | 
  |-----------|-----------------| 
- | ... | ... |
+ | Regisztráció tesztelése __név__+__email cím__+__jelszó kétszeri megadással__: | *Sikeres Regisztráció* oldalra navigál át az alkalmazás. | 
+ | Regisztráció tesztelése __nem megfelelő email címmel__: | Az oldal felhívja a figyelmet az **email cím** helytelenségéről. |
+ | Regisztráció __8 karakternél rövidebb jelszóval__: | Az oldal *piros szöveggel* felhívja a figyelmet arra, hogy __a jelszó túl rövid__. |
+ | Regisztráció __jelszó nélkül__: | Ugyanaz a figyelmeztetés jelenik meg, mint a 8 karakternél rövidebb **jelszó** eseténél. A gomb megnyomása után figyelmeztet, hogy a **jelszó**hoz tartozó űrlap __mező kitöltése kötelező__. |
+ | Regisztráció __jelszó megerősítés nélkül__: | Az oldal *piros szöveggel* felhívja a figyelmet arra, hogy a __jelszó megerősítés kötelező__. |
+ | Regisztráció __név megadás nélkül__: | Az oldal felhívja a figyelmet arra, hogy a **név**hez tartozó űrlap __mező kitöltése kötelező__. | 
+ | Regisztráció __email cím megadás nélkül__: | Az oldal felhívja a figyelmet arra, hogy az **email cím** tartozó űrlap __mező kitöltése kötelező__. |
+ | Regisztráció __egy már létező felhasználó adataival__: | *Sikertelen Regisztráció* oldalra navigál át az alkalmazás. |
+ | Bejelentkezés __email cím__+__jelszó megadással__: | Az alkalmazás a kezdőlapra navigál. |
+ | Bejelentkezés __nem megfelelő email címmel__: | Az oldal felhívja a figyelmet az **email cím** helytelenségéről. |
+ | Bejelentkezés __jelszó megadása nélkül__: | A *Bejelentkezés* gomb megnyomása után, a weboldal figyelmeztet arra, hogy a __jelszó mezőjének kitöltése kötelező__. |
+ | Bejelentkezés egy nem létező felhasználó adataival: | A weboldal a *Sikertelen bejelentkezés* részre irányít át. |
+ 
 
 ### 10.2 A tesztelési jegyzőkönyv kitöltésére egy sablon:
 
