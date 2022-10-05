@@ -17,18 +17,27 @@
 
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| 1 | home.php | lista | a köszöntő oldal ami feltünteti az összes terméket |
+| 1 | home.php | főoldal | a köszöntő oldal ami feltünteti a felhasználó lehetőségeit (termék böngészés / regisztráció / bejelentkezés) |
 | 2 | item.php | termék | egy-egy kiválasztott terméket megjelenítő oldal |
 | 3 | auth.php | bejelentkezés | felhasználó bejelentkezés kezelő |
 | 4 | auth.php | regisztráció | felhasználó regisztráció kezelő |
+| 5 | addProduct.php | Hozzáadás | új termék feltöltésére szolgáló felület |
+| 6 | list.php | böngésző | képes termék lista |
 
 ## 6. Használati esetek
 	1. Ha egy vásárló egy adott terméket már megvásárolt és kipróbálta akkor tapasztalatait megoszthatja az oldalon ezzel segítve a vásárlásra még csak készülő ember társait.
 	2. (Az első pontnak megfelelően) ha valaki online piac kutatást végez, hogy megtalálja a saját igényeinek legmegfelelőbb terméket akkor ezt az oldalt kereshetné fel.
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
-	1. ###
-		+ A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja.
+	### Termék értékelés ###
+		| Lefedett használati eset | Követelmény |
+		| :---: | :---: |
+		| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal |
+		| A felhasználó a regisztrációt választva kitölt egy űrlapot az adataival amiket eltárolunk az adatbázisban | regisztráció |
+		| A felhasználó adatai megadásával hitelesíti személy azonosságát. Ezzel jogot nyerve avélemény írásra és publikálásra | bejelentkezés |
+		| A felhasználó megkeresi az adott terméket amit értékelni szeretne | list.php |
+		| A felhasználó a értékelni kívánt terméket kiválasztva megírja és publikálásja az értékelését | item.php | 
+
 
 ## 8. Képernyőtervek
 
