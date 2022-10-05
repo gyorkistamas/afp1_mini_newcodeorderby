@@ -14,7 +14,7 @@ Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regiszt
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
-A jelenlegi helyzet szerint nincs lehetőség a termékek egy rendszerben történő értékelésére. Néhány cég biztosít a saját rendszerében a saját termékeinek értékelésére űrlapot, viszont ez decentralizált módon valósul meg. A különböző cégek különböző módon valósítják meg az értékelések bekérését, ami tovább rontja a decentralizáltságot. Például van, ahol egy 1-től 5-ig tartó skálán lehet értékelni a termékeket csillagokkal, más esetben egy szöveges üzenetet lehet hagyni, illetve ezeknek kombinációja is létezik.
+A jelenlegi helyzet szerint nincs lehetőség a termékek egy rendszerben történő értékelésére. Néhány cég biztosít a saját rendszerében a saját termékeinek értékelésére űrlapot, viszont ez decentralizált módon valósul meg. A különböző cégek különböző módon valósítják meg az értékelések bekérését, ami tovább rontja a centralizáltságot. Például van, ahol egy 1-től 5-ig tartó skálán lehet értékelni a termékeket csillagokkal, más esetben egy szöveges üzenetet lehet hagyni, illetve ezeknek kombinációja is létezik.
 
 ## 5. Igényelt üzleti folyamatok modellje
 
