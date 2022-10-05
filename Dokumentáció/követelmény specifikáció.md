@@ -14,17 +14,15 @@ Egy web alapú alkalmazás létrehozása, ahol a felhasználók képesek regiszt
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
-A jelenlegi helyzet szerint nincs lehetőség a termékek egy rendszerben történő értékelésére. Néhány gyártó nyújt lehetőséget saját termékeinek  értékeléseire, viszont ezek nem megbízhatóak, nem lehet biztonsággal megállapítani, hogy ezek valós vélemények, illetve azt sem, valós, létező emberek írták ezeket. Ezek mellett sok gyártó egyáltalán nem is ad erre lehetőséget. Ezek miatt az emberekben a termékekbe vetett bizalom jelentős mértékben csökken.
+A jelenlegi helyzet szerint nincs lehetőség a termékek egy rendszerben történő értékelésére. Néhány cég biztosít a saját rendszerében a saját termékeinek értékelésére űrlapot, viszont ez decentralizált módon valósul meg. A különböző cégek különböző módon valósítják meg az értékelések bekérését, ami tovább rontja a decentralizáltságot. Például van, ahol egy 1-től 5-ig tartó skálán lehet értékelni a termékeket csillagokkal, más esetben egy szöveges üzenetet lehet hagyni, illetve ezeknek kombinációja is létezik.
 
 ## 5. Igényelt üzleti folyamatok modellje
 
 - 1. Felhasználói fiók létrehozása
   - 1.1 Megfelelő jogosultsági körök (Felhasználó, moderátor)
 - 2. Termékek felvitele az adatbázisba
-  - 2.1 Termékek adatainak szerkesztése, vagy törlése (moderátor esetén)
 - 3. Termékek értékelésének lehetősége
-- 4. Felhasználók kezelése
-  - 4.1 Lehetőség a felhasználót törölni, vagy módosítani jogait.
+  - 3.1 Értékelés törlése nem megfelelő (vulgáris) szóhasználat esetén.
 
 ## 6. Követelménylista
 
