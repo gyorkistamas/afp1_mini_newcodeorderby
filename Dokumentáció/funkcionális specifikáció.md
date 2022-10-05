@@ -29,14 +29,14 @@
 	2. (Az első pontnak megfelelően) ha valaki online piac kutatást végez, hogy megtalálja a saját igényeinek legmegfelelőbb terméket akkor ezt az oldalt kereshetné fel.
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
-	### Termék értékelés ###
-		| Lefedett használati eset | Követelmény |
-		| :---: | :---: |
-		| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal |
-		| A felhasználó a regisztrációt választva kitölt egy űrlapot az adataival amiket eltárolunk az adatbázisban | regisztráció |
-		| A felhasználó adatai megadásával hitelesíti személy azonosságát. Ezzel jogot nyerve avélemény írásra és publikálásra | bejelentkezés |
-		| A felhasználó megkeresi az adott terméket amit értékelni szeretne | list.php |
-		| A felhasználó a értékelni kívánt terméket kiválasztva megírja és publikálásja az értékelését | item.php | 
+### Termék értékelés ###
+| Lefedett használati eset | Követelmény |
+| :---: | :---: |
+| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal |
+| A felhasználó a regisztrációt választva kitölt egy űrlapot az adataival amiket eltárolunk az adatbázisban | regisztráció |
+| A felhasználó adatai megadásával hitelesíti személy azonosságát. Ezzel jogot nyerve avélemény írásra és publikálásra | bejelentkezés |
+| A felhasználó megkeresi az adott terméket amit értékelni szeretne | list.php |
+| A felhasználó a értékelni kívánt terméket kiválasztva megírja és publikálásja az értékelését | item.php | 
 
 
 ## 8. Képernyőtervek
