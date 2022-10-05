@@ -1,5 +1,16 @@
+:root {
+	--bubble-bk: rgba(0, 0, 0, 0.7);
+	--bubble-radius: 5%;
+	--separator-bk: #5e595e;
+}
+
+.bubble {
+	background: var(--bubble-bk);
+}
+
+
 .cardpart {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: var(--bubble-bk);
 	border-radius: 10px;
 }
 
@@ -11,4 +22,8 @@ body {
 
 html, body {
 	min-height: 100%;
+}
+
+hr {
+	background: var(--separator-bk);
 }
