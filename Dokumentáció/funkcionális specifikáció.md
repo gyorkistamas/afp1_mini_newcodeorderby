@@ -8,7 +8,8 @@
 + Az oldaltulajdonos az értékeléseket szabadon szerkesztheti vagy törölheti ha helyén valónak látja.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
-N/A
++ Jelenleg a bolt vásárlóinak csak is az eladók szakértélermére és hozzáértésére vannak bízva. Ahogy érdeklődni lehessen egy termékről a felhasználónak személyesen vagy telefonon kell felvenni a kapcsolatot az üzlettel. Ebből adódik a probléma, hogy a tudakozódás nyitáshoz kötött. Továbbá mivel az eladóknak nincs személyes tapasztalata minden termékről így sok nem egyértelmű részlet kívül esik a tudásokun.
++ Más boltok rendelkeznek a vágyálomban megfogalmazotthoz hasonló rendszerekkel. Ezzel piaci előnyhöz jutattva azokat.
 
 ## 4. Igényelt üzleti folyamatok modellje
 N/A
