@@ -14,10 +14,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `review site`
+-- Adatbázis: `review_site`
 --
-CREATE DATABASE IF NOT EXISTS `review site` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
-USE `review site`;
+CREATE DATABASE IF NOT EXISTS `review_site` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+USE `review_site`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +27,7 @@ USE `review site`;
 
 CREATE TABLE `product` (
 `product_id` int(11) NOT NULL,
-`product_name` varchar(20) COLLATE utf8_hungarian_ci NOT NULL,
+`product_name` varchar(50) COLLATE utf8_hungarian_ci NOT NULL,
 `description` varchar(2000) COLLATE utf8_hungarian_ci DEFAULT NULL,
 `added_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
