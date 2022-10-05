@@ -12,7 +12,14 @@
 + Más boltok rendelkeznek a vágyálomban megfogalmazotthoz hasonló rendszerekkel. Ezzel piaci előnyhöz jutattva azokat.
 
 ## 4. Igényelt üzleti folyamatok modellje
-N/A
++ Profil kezelés
+    + felhasználó
+    + moderátor
++ Termék lista olvasás
++ Termék kezelés
+    + felvitel
+    + értékelés
+    + moderátori felülbírálás
 
 ## 5. Követelménylista
 
