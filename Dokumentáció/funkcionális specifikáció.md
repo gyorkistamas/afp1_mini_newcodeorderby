@@ -30,6 +30,7 @@
 | FK4 | addProduct.php | Hozzáadás | új termék feltöltésére szolgáló felület |
 | FK5 | list.php | böngésző | képes termék lista |
 | FK6 | item.php | termék_leírás | egy-egy kiválasztott terméket megjelenítő oldal |
+| FK7 | index.php | alapértelmezett_landoló | átirányít list.php-re. **Magyarázat**: a *böngészőt* szeretnénk landolási oldalnak, de (álltalában) az alapértelmezett az "index.php". bár ez átkonfigurálható szeretnénk az oldalt szerver alkalmazástól függetleníteni, ezért legegyszerűbb ha innen mindíg átirányítunk.
 | FK101 | header.php | fejléc | minden oldal tetején megjelenő egységes menü; feltünteti a lehetőségeit (termék böngészés / regisztráció / bejelentkezés)  |
 
 ## 6. Használati esetek
@@ -62,12 +63,22 @@
 
 ## 8. Képernyőtervek
 
-![Regisztrációs lap](../Dokumentáció/Képernyőtervek/Bejelentkezés_és_Regisztráció_Lap.png)
-![Sikeres regisztrációs lap](../Dokumentáció/Képernyőtervek/Sikeres_Regisztráció_Lap.png)
-![Siketelen regisztrációs lap](../Dokumentáció/Képernyőtervek/Sikertelen_Regisztráció.png)
-![Siketelen bejelentkezés lap](../Dokumentáció/Képernyőtervek/Sikertelen_Bejelentkezés_Lap.png)
+![Regisztrációs lap](Képernyőtervek/Bejelentkezés_és_Regisztráció_Lap.png)
+![Sikeres regisztrációs lap](Képernyőtervek/Sikeres_Regisztráció_Lap.png)
+![Siketelen regisztrációs lap](Képernyőtervek/Sikertelen_Regisztráció.png)
+![Siketelen bejelentkezés lap](Képernyőtervek/Sikertelen_Bejelentkezés_Lap.png)
 
 ## 9. Forgatókönyvek
+
+1. Regisztráció
+![regisztrációs_forgatókönyv](Forgatókönyvek/regisztrációs_forgatókönyv.png)
+2. Bejelentkezés
+![bejelentkezési_forgatókönyv](Forgatókönyvek/bejelentkezési_forgatókönyv.png)
+3. Böngészés
+![böngészés](Forgatókönyvek/böngeszés_forgatókönyv.drawio.png)
+4. Review írás
+5. Termék hozzáadása
+5. Moderálás
 
 ## 10. Funkció - követelmény megfeleltetése
 
