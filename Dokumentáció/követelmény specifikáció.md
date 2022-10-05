@@ -38,3 +38,5 @@ A jelenlegi helyzet szerint nincs lehetőség a termékek egy rendszerben tört�
 
 - review: áttekintés idegen szóval
 - moderátor: személy(ek), aki a bevitt adatokat ellenőrzi, hogy megfelel-e bizonyos kritériumoknak, szabályoknak
+- centralizált: más szóval központosított.
+- decentralizált: centralizált ellentettje, azaz nem központosított.
