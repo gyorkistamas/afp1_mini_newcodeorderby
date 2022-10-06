@@ -5,6 +5,10 @@
     $route = explode("/", $_SERVER['PHP_SELF']);
     $thisPage = end($route);
 
+    
+
+    
+
     echo "<form action='' method='post'>";
 
     echo $status ? "<button type='submit' name='LogoutBtn' class='btn btn-success'>Kijelentkezés</button>
@@ -22,6 +26,7 @@
                 
     // }
         echo "<button type='submit' name='HomePageBtn' class='btn btn-success'>Főoldal</button>";
+        echo "<h1>".$thisPage."</h1>";
     echo "</form>";
 ?>
 
