@@ -1,3 +1,16 @@
+
+<?php
+
+
+include "../controller/userLoggedin.php";
+
+if (isLoggedIn()) {
+    header("Location: ../index.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="hu">
 
