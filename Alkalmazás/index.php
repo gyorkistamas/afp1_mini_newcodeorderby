@@ -1,7 +1,7 @@
 
 <?php
 
-require './controller/userLoggedIn.php';
+require 'controller/userLoggedIn.php';
 $status = isLoggedIn();
 
 
@@ -12,13 +12,13 @@ $status = isLoggedIn();
 if ( isset($_POST['LogoutBtn']) ) {
     unset($_SESSION['UserData']);
     session_destroy();
-    header("Location: ./view/auth.php");
+    header("Location: view/auth.php");
 }
 
 //Bejelentkező oldalra navigálás:
 
 if ( isset($_POST['LoginBtn']) ) {
-    header("Location: ./view/auth.php");
+    header("Location: view/auth.php");
  }
 
 
@@ -45,9 +45,10 @@ if ( isset($_POST['LoginBtn']) ) {
 
     
     <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">
-        <?php require './menubar.php';?>
+        <?php require 'menubar.php';?>
     </div>
 
+    
     <h1 class='text-white'>Felhasználó adatai:</h1>
 
 
