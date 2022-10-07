@@ -83,6 +83,7 @@
 5. Termék hozzáadása
 ![review_írás](Forgatókönyvek/hozzáadás_forgatókönyv.png)
 5. Moderálás
+![moderálás](Forgatókönyvek/moderálás_forgatókönyv.png)
 
 ## 10. Funkció - követelmény megfeleltetése
 
