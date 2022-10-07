@@ -51,6 +51,9 @@
 						#item_desc {
 							margin-left: 1%;
 						}
+					.review_title>h1,h2{
+						display: inline;
+					}
 			</style>
 		</head>
 		<body>
@@ -70,6 +73,26 @@
 					<span>
 				</div>
 			</div>
+
+			<?php
+				$qry = "select name, message from review
+						inner join user on user_id = review.added_by
+						where product_id=" . $tmp;
+				$reviews = $connection->query($qry);
+				foreach($reviews as $r):
+			?>
+				<div class="bubble rounded review">
+					<div class=review_title>
+						<h1 class=h1>By: <h2 class=h2><?=$r["name"]?></h2></h1>
+					</div>
+					<hr size=4px></hr>
+					<span id="item_desc" class=h3>
+						<?=$r["message"]?>
+					<span>
+				</div>
+			<?php
+				endforeach;
+			?>
 
 			<script>
 			</script>
