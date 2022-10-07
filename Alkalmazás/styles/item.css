@@ -1,0 +1,51 @@
+body * {
+	color: white !important;
+}
+.bubble {
+	width: 80%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0.5%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+}
+	#item_body {
+		display: flex;
+	}
+		#item_name {
+			margin-top: 0.5rem;
+		}
+		#item_img {
+			border: 7px solid var(--separator-bg);
+			display: inline;
+		}
+		#item_desc {
+			margin-left: 1%;
+		}
+	.review_title>h1,h2 {
+		display: inline;
+	}
+	#contribute div {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 1%;
+	}
+		#contribute h1 {
+		}
+		#contribute button {
+			background: var(--button-bg);
+			font-size: 4rem;
+			padding-left: 1%;
+			padding-right: 1%;
+			float: right;
+		}
+		#contribute textarea {
+			background: rgba(0, 0, 0, 0.9);
+			font-size: 1.5rem;
+			height: 200px;
+			width: 100%;
+			margin-top: 1%;
+			border: solid var(--separator-bg) initial;
+		}

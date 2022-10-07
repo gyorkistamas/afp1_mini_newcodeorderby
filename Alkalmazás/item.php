@@ -21,54 +21,12 @@
 			<link rel="icon" type="image/x-icon" href="imgs/favicon.png">
 			<link rel="stylesheet" type="text/css" href="./bootstrap,jquery/bootstrap.min.css">
 			<link rel="stylesheet" type="text/css" href="./styles/global.css">
+			<link rel="stylesheet" type="text/css" href="./styles/item.css">
+			<link rel="stylesheet" type="text/css" href="./styles/loginPopup.css">
 			<script src="./bootstrap,jquery/jquery-3.6.1.min.js"></script>
 			<script src="./bootstrap,jquery/bootstrap.min.js"></script>
 			<!-- -->
 			<style>
-				body * {
-					color: white !important;
-				}
-				.bubble {
-					width: 80%;
-					margin-top: 5%;
-					margin-left: auto;
-					margin-right: auto;
-					padding-top: 0.5%;
-					padding-left: 2%;
-					padding-right: 2%;
-					padding-bottom: 2%;
-				}
-					#item_body {
-						display: flex;
-					}
-						#item_name {
-							margin-top: 0.5rem;
-						}
-						#item_img {
-							border: 7px solid var(--separator-bk);
-							display: inline;
-						}
-						#item_desc {
-							margin-left: 1%;
-						}
-					.review_title>h1,h2 {
-						display: inline;
-					}
-					.contribute div {
-						display: flex;
-						justify-content: space-between;
-						padding-top: 1%;
-					}
-						.contribute h1 {
-						}
-						.contribute button {
-							background: var(--button-color);
-							border: none;
-							font-size: 4rem;
-							padding-left: 1%;
-							padding-right: 1%;
-							float: right;
-						}
 			</style>
 		</head>
 		<body>
@@ -89,9 +47,10 @@
 				</div>
 			</div>
 
-			<div class="bubble rounded contribute">
+			<div id=contribute class="bubble rounded">
 				<div>
-					<h1 class=h1>Hagyja ön is itt a véleményét:</h1><button class=rounded>+</button>
+					<h1 class=h1>Hagyja ön is itt a véleményét:</h1>
+					<button class=rounded onClick="contribute_attempt()">+</button>
 				</div>
 			</div>
 
@@ -116,29 +75,42 @@
 			?>
 
 			<script>
-				let v
+				let hContribute = document.getElementById('contribute');
 
-				function attempt_to_contribute(){
+				function contribute_attempt(){
 					if(!is_logged_in()){
 						login_popup_init();
 						return false;
 					}
 
-					
+					hContribute.appendChild(document.createElement('textarea'));
+					var hB = hContribute.getElementsByTagName('button')[0];
+					hB.innerText = "Publikálás";
+					// ?!
+					//hB.style.fontSize = Math.floor((parseInt(hB.style.fontSize) - 2)) + "rem";
+					hB.onClick = contribute_submit;
 
 					return true;
+				}
+				function contribute_submit(){
+
 				}
 
 				function login_popup_init(){
-
+					console.log('pop init')
+					var hPopup = document.body.appendChild(document.createElement('div'));
+					var popupHtml = `<?php require 'loginPopup.php'?>`;
+					popupHtml = popupHtml.substr(0, popupHtml.length-1);
+					hPopup.innerHTML = popupHtml;
 				}
 
 				function login_popup_die(){
-					
+					document.getElementById('login_popup').remove();
 				}
 
-				function is_loged_in(){
-					return true;
+				function is_logged_in(){
+					//return true;
+					return false;
 				}
 			</script>
 		</body>
