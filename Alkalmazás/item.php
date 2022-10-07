@@ -51,9 +51,24 @@
 						#item_desc {
 							margin-left: 1%;
 						}
-					.review_title>h1,h2{
+					.review_title>h1,h2 {
 						display: inline;
 					}
+					.contribute div {
+						display: flex;
+						justify-content: space-between;
+						padding-top: 1%;
+					}
+						.contribute h1 {
+						}
+						.contribute button {
+							background: var(--button-color);
+							border: none;
+							font-size: 4rem;
+							padding-left: 1%;
+							padding-right: 1%;
+							float: right;
+						}
 			</style>
 		</head>
 		<body>
@@ -67,10 +82,16 @@
 				<h1 id=item_name class=h1><?=$item["product_name"]?></h1>
 				<hr size=4px></hr>
 				<div id=item_body>
-					<img id=item_img src="../stock/img/stock_item.jpg">
+					<img id=item_img src="../Források/kép/stock_item.jpg">
 					<span id="item_desc" class=h3>
 						<?=$item["description"]?>
 					<span>
+				</div>
+			</div>
+
+			<div class="bubble rounded contribute">
+				<div>
+					<h1 class=h1>Hagyja ön is itt a véleményét:</h1><button class=rounded>+</button>
 				</div>
 			</div>
 
@@ -83,7 +104,7 @@
 			?>
 				<div class="bubble rounded review">
 					<div class=review_title>
-						<h1 class=h1>By: <h2 class=h2><?=$r["name"]?></h2></h1>
+						<h1 class=h1>Írta: <h2 class=h2><?=$r["name"]?></h2></h1>
 					</div>
 					<hr size=4px></hr>
 					<span id="item_desc" class=h3>
@@ -95,6 +116,30 @@
 			?>
 
 			<script>
+				let v
+
+				function attempt_to_contribute(){
+					if(!is_logged_in()){
+						login_popup_init();
+						return false;
+					}
+
+					
+
+					return true;
+				}
+
+				function login_popup_init(){
+
+				}
+
+				function login_popup_die(){
+					
+				}
+
+				function is_loged_in(){
+					return true;
+				}
 			</script>
 		</body>
 	</html>

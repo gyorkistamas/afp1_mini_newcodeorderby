@@ -2,6 +2,7 @@
 	--bubble-bk: rgba(0, 0, 0, 0.7);
 	--bubble-radius: 5%;
 	--separator-bk: #5e595e;
+	--button-color: rgb(25, 135, 84);
 }
 
 .bubble {
