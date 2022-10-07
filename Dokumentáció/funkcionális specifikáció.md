@@ -47,26 +47,26 @@
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 ### Termék értékelés ###
-| Lefedett használati eset | Követelmény |
-| :---: | :---: |
-| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal |
-| A *felhasználó* a regisztrációt választva kitölt egy űrlapot az adataival amiket eltárolunk az adatbázisban. | regisztráció |
-| A *felhasználó* *profil* adatai megadásával hitelesíti személy azonosságát. Ezzel jogot nyerve avélemény írásra és publikálásra. | bejelentkezés |
-| A *felhasználó* megkeresi az adott terméket amit értékelni szeretne. | böngésző |
-| A *felhasználó* a értékelni kívánt terméket kiválasztva megírja és publikálásja az értékelését. | termék_leírás | 
-| Mivel a termékről még egy értékelés sem készült, ezért a *felhasználó* hozzá adja a termék listához, az első (saját) értékelléssel egyetemben. | Hozzáadás |
+| Lefedett használati eset | Követelmény | Követelmény azonosító(k) |
+| :---: | :---: | :---: |
+| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal | M3 |
+| A *felhasználó* a regisztrációt választva kitölt egy űrlapot az adataival amiket eltárolunk az adatbázisban. | regisztráció | M1 |
+| A *felhasználó* *profil* adatai megadásával hitelesíti személy azonosságát. Ezzel jogot nyerve avélemény írásra és publikálásra. | bejelentkezés | M2 |
+| A *felhasználó* megkeresi az adott terméket amit értékelni szeretne. | böngésző | M3 | 
+| A *felhasználó* a értékelni kívánt terméket kiválasztva megírja és publikálásja az értékelését. | termék_leírás | M4, M5 |
+| Mivel a termékről még egy értékelés sem készült, ezért a *felhasználó* hozzá adja a termék listához, az első (saját) értékelléssel egyetemben. | Hozzáadás | N/A |
 ### Termék böngészés ###
 | Lefedett használati eset | Követelmény |
 | :---: | :---: |
-| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal |
-| A felhasznó a böngészést választva kap egy listát minden már értékelt termékről. | böngésző || A felhasznó a keresett terméket megtalálva annak saját oldalán elolvashatja a mások álltal hagyott értékeléseket. | termék_leírás |
+| A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal | M3 |
+| A felhasznó a böngészést választva kap egy listát minden már értékelt termékről. | böngésző || A felhasznó a keresett terméket megtalálva annak saját oldalán elolvashatja a mások álltal hagyott értékeléseket. | termék_leírás | M3 |
 ### Üzemeltetői felülbírálás ###
 | Lefedett használati eset | Követelmény |
 | :---: | :---: |
-| A *moderátor* megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal |
-| A *moderátor* miután a bejelentkezést választotta hitelesíti *profil* adatait. Innentől kezdve élhet moderátori jogkörével | főoldal |
-| A *moderátor* kikeresi a módosítani kívánt terméket. | böngésző |
-| A *moderátor* a megfelelő terméket kiválasztotta. Szabadon módosíthatja azt és a hozzá tartozó értékeléseket. | termék_leírás |
+| A *moderátor* megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal | M3 |
+| A *moderátor* miután a bejelentkezést választotta hitelesíti *profil* adatait. Innentől kezdve élhet moderátori jogkörével | főoldal | M2 |
+| A *moderátor* kikeresi a módosítani kívánt terméket. | böngésző | M3 |
+| A *moderátor* a megfelelő terméket kiválasztotta. Szabadon módosíthatja azt és a hozzá tartozó értékeléseket. | termék_leírás | M4 |
 
 ## 8. Képernyőtervek
 
