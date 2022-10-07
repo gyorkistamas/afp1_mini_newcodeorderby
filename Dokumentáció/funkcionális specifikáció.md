@@ -31,7 +31,7 @@
 | FK5 | list.php | böngésző | képes termék lista |
 | FK6 | item.php | termék_leírás | egy-egy kiválasztott terméket megjelenítő oldal |
 | FK7 | index.php | alapértelmezett_landoló | átirányít list.php-re. **Magyarázat**: a *böngészőt* szeretnénk landolási oldalnak, de (álltalában) az alapértelmezett az "index.php". bár ez átkonfigurálható szeretnénk az oldalt szerver alkalmazástól függetleníteni, ezért legegyszerűbb ha innen mindíg átirányítunk.
-| FK101 | header.php | fejléc | minden oldal tetején megjelenő egységes menü; feltünteti a lehetőségeit (termék böngészés / regisztráció / bejelentkezés)  |
+| FK101 | menubar.php | fejléc | minden oldal tetején megjelenő egységes menü; feltünteti a lehetőségeit (termék böngészés / regisztráció / bejelentkezés)  |
 | FK201 | Makefile | a rendszer telepítésére szolgáló script
 
 ## 6. Használati esetek
