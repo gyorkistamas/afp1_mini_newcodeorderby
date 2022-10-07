@@ -6,4 +6,8 @@ function connect($dbname, $username, $password, $port)
     return $con;
 }
 
+function std_connect(){
+	return new mysqli('localhost', 'apf', substr(file_get_contents("controller/root_passwd.txt"), 0, -1), 'review_site');
+}
+
 ?>

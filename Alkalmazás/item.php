@@ -4,10 +4,15 @@
 			Creation Date: Wed Oct  5 10:10:44 AM CEST 2022
 		-->
 		<?php
-			require 'controller/userLoggedIn.php';
+			require 'controller/dbms.php';
+			$connection = std_connect();
+
+			$tmp = 1;
+
+			$item = $connection->query("select * from product where product_id=" . 1)->fetch_assoc();
 		?>
 		<head>
-			<title>[terméknév] | leírás</title>
+			<title><?=$item["product_name"]?> | leírás</title>
 			<!-- -->
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,12 +61,12 @@
 			<!-- -->
 			
 			<div id=item_bubble class="bubble rounded">
-				<h1 id=item_name class=h1>[Termék név]</h1>
+				<h1 id=item_name class=h1><?=$item["product_name"]?></h1>
 				<hr size=4px></hr>
 				<div id=item_body>
 					<img id=item_img src="../stock/img/stock_item.jpg">
 					<span id="item_desc" class=h3>
-						Ez egy értelmes hosszúságú egy termékről szóló termék leírás. Képernyőtervet kitöltő egyéb értelmes magyar szöveg.
+						<?=$item["description"]?>
 					<span>
 				</div>
 			</div>
