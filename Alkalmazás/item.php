@@ -7,9 +7,9 @@
 			require 'controller/dbms.php';
 			$connection = std_connect();
 
-			$tmp = 1;
+			$product_id = 1;
 
-			$item = $connection->query("select * from product where product_id=" . 1)->fetch_assoc();
+			$item = $connection->query("select * from product where product_id=" . $product_id)->fetch_assoc();
 		?>
 		<head>
 			<title><?=$item["product_name"]?> | leírás</title>
@@ -35,7 +35,7 @@
 				<?php require 'menubar.php';?>
 			</div>
 			<!-- -->
-			
+			<!-- Item main -->
 			<div id=item_bubble class="bubble rounded">
 				<h1 id=item_name class=h1><?=$item["product_name"]?></h1>
 				<hr size=4px></hr>
@@ -47,17 +47,19 @@
 				</div>
 			</div>
 
-			<div id=contribute class="bubble rounded">
-				<div>
+			<!-- Contribute -->
+			<div action="controller/addReview.php" method=post id=contribute class="bubble rounded">
+				<form action="controller/addReview.php" method=post>
 					<h1 class=h1>Hagyja ön is itt a véleményét:</h1>
-					<button class=rounded onClick="contribute_attempt()">+</button>
-				</div>
+					<button class=rounded type=button onClick="contribute_attempt()">+</button>
+				</form>
 			</div>
 
+			<!-- Review list -->
 			<?php
 				$qry = "select name, message from review
 						inner join user on user_id = review.added_by
-						where product_id=" . $tmp;
+						where product_id=" . $product_id;
 				$reviews = $connection->query($qry);
 				foreach($reviews as $r):
 			?>
@@ -74,6 +76,11 @@
 				endforeach;
 			?>
 
+			<!-- -->
+			<?php
+				$connection->close();
+			?>
+
 			<script>
 				let hContribute = document.getElementById('contribute');
 
@@ -83,17 +90,20 @@
 						return false;
 					}
 
-					hContribute.appendChild(document.createElement('textarea'));
+					var bT = hContribute.appendChild(document.createElement('textarea'));
+					bT.name = "message";
 					var hB = hContribute.getElementsByTagName('button')[0];
 					hB.innerText = "Publikálás";
+					hB.onclick = contribute;
 					// ?!
 					//hB.style.fontSize = Math.floor((parseInt(hB.style.fontSize) - 2)) + "rem";
-					hB.onClick = contribute_submit;
+
+					//var hF = hContribute.getElementsByClassName('form')[0];
 
 					return true;
 				}
-				function contribute_submit(){
-
+				function contribute(){
+					hContribute.getElementsByTagName('form')[0].submit();
 				}
 
 				function login_popup_init(){
@@ -109,8 +119,8 @@
 				}
 
 				function is_logged_in(){
-					//return true;
-					return false;
+					return true;
+					//return false;
 				}
 			</script>
 		</body>

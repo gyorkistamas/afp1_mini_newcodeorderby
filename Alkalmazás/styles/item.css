@@ -1,3 +1,7 @@
+body {
+	padding-bottom: 100px;
+}
+
 body * {
 	color: white !important;
 }
@@ -27,7 +31,7 @@ body * {
 	.review_title>h1,h2 {
 		display: inline;
 	}
-	#contribute div {
+	#contribute form {
 		display: flex;
 		justify-content: space-between;
 		padding-top: 1%;
