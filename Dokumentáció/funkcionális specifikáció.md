@@ -1,6 +1,13 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
-+ A megszabott felhasználási módot a megrendelő pusztán analalog módon pótolja ki. Minden kommunikáció pusztán szóban történik, adatkezelésről nem beszélhetünk. Jelenleg semmi féle rendszer nem áll rendelkezésre. Minden funkciót az alapoktól kell meg valósítani.
++ A megrendelő nem rendelkezik informatikai rendszerrel.
+    - Meglévő rendszer bővítése lehetetlen.
++ A megrendelő egy boltal rendelkezik.
+    - Az érdeklődőknek nyitvatartáskor kell informálódniuk (weboldal hiányában) -> időhöz kötöttség.
+    - Az érdeklődőknek a bolt boltban kell megjelennie (weboldal hiányában) -> helyhez kötöttség.
++ A vásárlók megtartják véleményüket személyes körben.
+    - A vásárlók véleményekről személyesen lehetséges tájékozódni (weboldal hiányában) -> decentralizáltság.
+    - A vásárlók véleménye elfakul, elfelejtődik (adatbázis hiányában) -> múlandoság.
 
 ## 2. Vágyállomrendszer leírása
 + Egy olyan termék értékelő oldal, amellyen a termékek listája publikusan elérhető.
@@ -105,8 +112,8 @@
         - jelszó
         - jogkör
 + **jogkör**: egy felhasználható álltal végre hajtható műveletek halmaza.
-	* fajtái:
-		- felhasználói: értékelésírás; saját értékelés módosítás;-i képesség(ek)et ad
-		- moderátori: felhasználó; bármely értékelés módosítás; bármely értékelés módosítás;-i képesség(ek)et ad
+    * fajtái:
+        - felhasználói: értékelésírás; saját értékelés módosítás;-i képesség(ek)et ad
+        - moderátori: felhasználó; bármely értékelés módosítás; bármely értékelés módosítás;-i képesség(ek)et ad
 + **felhasználó**: olyan személy aki rendelkezik *profil*-lal
 + **moderátor**: olyan felhasználó akinek *jogköre* moderátori
