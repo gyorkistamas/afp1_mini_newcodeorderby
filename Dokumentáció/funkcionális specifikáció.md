@@ -67,6 +67,7 @@
 ![Sikeres regisztrációs lap](Képernyőtervek/Sikeres_Regisztráció_Lap.png)
 ![Siketelen regisztrációs lap](Képernyőtervek/Sikertelen_Regisztráció.png)
 ![Siketelen bejelentkezés lap](Képernyőtervek/Sikertelen_Bejelentkezés_Lap.png)
+![Termék_lap_1](Képernyőtervek/item_lap.png)
 
 ## 9. Forgatókönyvek
 
@@ -75,9 +76,11 @@
 2. Bejelentkezés
 ![bejelentkezési_forgatókönyv](Forgatókönyvek/bejelentkezési_forgatókönyv.png)
 3. Böngészés
-![böngészés](Forgatókönyvek/böngeszés_forgatókönyv.drawio.png)
+![böngészés](Forgatókönyvek/böngeszés_forgatókönyv.png)
 4. Review írás
+![review_írás](Forgatókönyvek/review_írás.png)
 5. Termék hozzáadása
+![review_írás](Forgatókönyvek/hozzáadás_forgatókönyv.png)
 5. Moderálás
 
 ## 10. Funkció - követelmény megfeleltetése
