@@ -53,3 +53,6 @@ body * {
 			margin-top: 1%;
 			border: solid var(--separator-bg) initial;
 		}
+		#contribute_error {
+			color: red !important;
+		}

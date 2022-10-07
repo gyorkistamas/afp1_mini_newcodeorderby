@@ -56,6 +56,7 @@
 					</div>
 					<input style="display: none;" name=product_id value="<?=$product_id?>"></input>
 				</form>
+				<div id=contribute_error></div>
 			</div>
 
 			<!-- Review list -->
@@ -94,7 +95,9 @@
 					}
 
 					var bT = hContribute.getElementsByTagName('form')[0].appendChild(document.createElement('textarea'));
+					bT.id = "cont_message";
 					bT.name = "message";
+					bT.placeholder = "Ide gépelhet...";
 					var hB = hContribute.getElementsByTagName('button')[0];
 					hB.innerText = "Publikálás";
 					hB.onclick = contribute;
@@ -106,6 +109,10 @@
 					return true;
 				}
 				function contribute(){
+					if(document.getElementById('cont_message').value == ""){
+						document.getElementById('contribute_error').innerText = "*Az értékelés szövege üres, melynek kitöltése kötelező";
+						return
+					}
 					hContribute.getElementsByTagName('form')[0].submit();
 				}
 
