@@ -1,8 +1,7 @@
-
 <?php
 
 
-include "../controller/userLoggedin.php";
+require "../controller/userLoggedIn.php";
 
 if (isLoggedIn()) {
     header("Location: ../index.php");
