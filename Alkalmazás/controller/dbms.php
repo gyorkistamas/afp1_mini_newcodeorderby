@@ -1,8 +1,10 @@
 <?php
 
-function connect($dbname, $username, $password, $port)
+function connect()
+//function connect($dbname, $username, $password, $port)
 {
-    $con = mysqli_connect('localhost', $username, $password, $dbname, $port);
+    //$con = mysqli_connect('localhost', $username, $password, $dbname, $port);
+    $con = mysqli_connect('localhost', 'afp', 'password', 'review_site', 3306);
     return $con;
 }
 

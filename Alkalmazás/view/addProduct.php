@@ -1,6 +1,5 @@
 <?php
 
-
 require "../controller/userLoggedIn.php";
 
 if (!isLoggedIn())
