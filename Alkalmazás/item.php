@@ -50,8 +50,11 @@
 			<!-- Contribute -->
 			<div action="controller/addReview.php" method=post id=contribute class="bubble rounded">
 				<form action="controller/addReview.php" method=post>
-					<h1 class=h1>Hagyja ön is itt a véleményét:</h1>
-					<button class=rounded type=button onClick="contribute_attempt()">+</button>
+					<div>
+						<h1 class=h1>Hagyja ön is itt a véleményét:</h1>
+						<button class=rounded type=button onClick="contribute_attempt()">+</button>
+					</div>
+					<input style="display: none;" name=product_id value="<?=$product_id?>"></input>
 				</form>
 			</div>
 
@@ -90,7 +93,7 @@
 						return false;
 					}
 
-					var bT = hContribute.appendChild(document.createElement('textarea'));
+					var bT = hContribute.getElementsByTagName('form')[0].appendChild(document.createElement('textarea'));
 					bT.name = "message";
 					var hB = hContribute.getElementsByTagName('button')[0];
 					hB.innerText = "Publikálás";
