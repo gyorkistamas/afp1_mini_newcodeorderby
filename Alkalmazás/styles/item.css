@@ -15,11 +15,31 @@ body * {
 	padding-right: 2%;
 	padding-bottom: 2%;
 }
+	.save {
+		background: var(--button-bg);
+		border: none;
+		float: right;
+		padding-top: 0.2%;
+	}
+	.delete {
+		background: red;
+		border: none;
+		float: right;
+		padding-top: 0.2%;
+		margin-right: 1%;
+	}
+	#item_bubble .save {
+		font-size: 2.5rem;
+	}
+	#item_bubble .delete {
+		font-size: 2.5rem;
+	}
 	#item_body {
 		display: flex;
 	}
 		#item_name {
 			margin-top: 0.5rem;
+			display: inline-block;
 		}
 		#item_img {
 			border: 7px solid var(--separator-bg);
@@ -28,6 +48,9 @@ body * {
 		#item_desc {
 			margin-left: 1%;
 		}
+	#item_bubble input {
+		margin-top: 0.8%;
+	}
 	.review_title>h1,h2 {
 		display: inline;
 	}
@@ -56,3 +79,9 @@ body * {
 		#contribute_error {
 			color: red !important;
 		}
+	.review .save {
+		font-size: 2rem;
+	}
+	.review .delete {
+		font-size: 2rem;
+	}

@@ -7,7 +7,10 @@
 			require 'controller/dbms.php';
 			$connection = std_connect();
 
+			# --- Debug values ---
 			$product_id = 1;
+			$is_moderator = true;
+			###
 
 			$item = $connection->query("select * from product where product_id=" . $product_id)->fetch_assoc();
 		?>
@@ -37,14 +40,29 @@
 			<!-- -->
 			<!-- Item main -->
 			<div id=item_bubble class="bubble rounded">
-				<h1 id=item_name class=h1><?=$item["product_name"]?></h1>
+				<h1 id=item_name class=h1 <?=($is_moderator ? "contentEditable=true" : "")?>><?=$item["product_name"]?></h1>
+				<?php
+					if($is_moderator):
+				?>
+					<button class="save rounded">Mentés</button>
+					<button class="delete rounded">Termék törlése</button>
+				<?php
+					endif;
+				?>
 				<hr size=4px></hr>
 				<div id=item_body>
 					<img id=item_img src="../Források/kép/stock_item.jpg">
-					<span id="item_desc" class=h3>
+					<span id="item_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
 						<?=$item["description"]?>
-					<span>
+					</span>
 				</div>
+				<?php
+					if($is_moderator):
+				?>
+					<input type=file></input>
+				<?php
+					endif;
+				?>
 			</div>
 
 			<!-- Contribute -->
@@ -70,9 +88,17 @@
 				<div class="bubble rounded review">
 					<div class=review_title>
 						<h1 class=h1>Írta: <h2 class=h2><?=$r["name"]?></h2></h1>
+						<?php
+							if($is_moderator):
+						?>
+							<button class="save rounded">Mentés</button>
+							<button class="delete rounded">Értékelés törlése</button>
+						<?php
+							endif;
+						?>
 					</div>
 					<hr size=4px></hr>
-					<span id="item_desc" class=h3>
+					<span id="item_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
 						<?=$r["message"]?>
 					<span>
 				</div>
@@ -128,9 +154,12 @@
 					document.getElementById('login_popup').remove();
 				}
 
-				function is_logged_in(){
+				function is_logged_in(){	// debug implementation
 					return true;
 					//return false;
+				}
+				function is_moderator(){	// debug implementation
+					return true;
 				}
 			</script>
 		</body>
