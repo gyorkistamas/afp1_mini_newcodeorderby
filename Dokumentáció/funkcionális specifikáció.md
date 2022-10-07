@@ -10,9 +10,8 @@
     - A vásárlók véleménye elfakul, elfelejtődik (adatbázis hiányában) -> múlandoság.
 
 ## 2. Vágyállomrendszer leírása
-+ Egy olyan termék értékelő oldal, amellyen a termékek listája publikusan elérhető.
-+ *felhasználó*k hozzáadhatnak termékeket és szövegesen értékelhetik bármelyiket. Amennyiben *felhasználó* névvel, email-el és jelszóval regisztráltak.
-+ Az oldaltulajdonos az értékeléseket szabadon szerkesztheti vagy törölheti ha helyén valónak látja.
++ Egy termékek értékelésére alkalmas oldal. Itt az árúsított termékek listája publikusan elérhető minden érdeklődőszámára. Más felhasználók írásban megfogalmazott tapasztalataiból tanulhatnak. Ezáltal alaposabb véleményt formálhatnak egy-egy termékről és vagy márkáról. Ha egy vásárló meg osztaná pozitív tapasztalatait vagy esetleg hallgató füleknek szeretne panaszkodni ide fordulna majd szivesen. Eközben az emberek tudatába mélyebben beépül a megbízó cég neve és nagyobb bizalommal fordulnak majd hozzá.
++ Az oldaltulajdonos tejhatalommal rendelkezik a megosztott tartalmak fölett - ezzel biztosítva, hogy nem eshet folt a jó hírnevén. Ha egy értékelésben problémás (trágár) részt talál azt kitörölheti belöle. Amennyiben a hozzászólást menthetlennek ítéli azt végleg meg is semmisítheti. Képes a felvitt termékek információinak pontosítására és felülírására is. Mind ezt egy intuitív, interaktív felületről aminek a használata nem igényel képzést. Minden alkalmazott akár azonnak hozzá láthat a moderáláshoz.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
 + Jelenleg a bolt vásárlóinak csak is az eladók szakértélermére és hozzáértésére vannak bízva. Ahogy érdeklődni lehessen egy termékről a felhasználónak személyesen vagy telefonon kell felvenni a kapcsolatot az üzlettel. Ebből adódik a probléma, hogy a tudakozódás nyitáshoz kötött. Továbbá mivel az eladóknak nincs személyes tapasztalata minden termékről így sok nem egyértelmű részlet kívül esik a tudásokun.
