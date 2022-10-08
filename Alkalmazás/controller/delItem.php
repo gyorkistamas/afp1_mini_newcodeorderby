@@ -1,17 +1,24 @@
 <?php
 	session_start();	// debug csalás
 	if(session_status() === PHP_SESSION_NONE || $_SERVER["REQUEST_METHOD"] != "GET" ||
-		!array_key_exists('product_id', $_GET)
+		!array_key_exists('table', $_GET) ||
+		!array_key_exists('field', $_GET) ||
+		!array_key_exists('value', $_GET)
 	){
 		header("Location: ../index.php");
 	}
 
 	require 'dbms.php';
 	$connection = std_connect();
-	$qry = "DELETE FROM product WHERE product_id=" . $_GET['product_id'] .";";
-	echo $qry;
+	$qry = "DELETE FROM " . $_GET['table'] . " WHERE " . $_GET['field'] . "=" . $_GET['value'] .";";
+	//echo $qry;
+	//die();
 	$connection->query($qry);
 	$connection->close();
 
-	header("Location: ../index.php");
+	if(array_key_exists('redirect', $_GET)){
+		header("Location: " . $_GET['redirect']);
+	}else{
+		header("Location: ../index.php");
+	}
 ?>

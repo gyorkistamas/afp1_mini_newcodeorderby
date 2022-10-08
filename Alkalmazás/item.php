@@ -49,7 +49,9 @@
 					</form>
 					<form class=actionButton style="margin-right: 1%;" action="controller/delItem.php">
 						<button class="delete rounded">Termék&nbsptörlése</button>
-						<input style="display: none" name="product_id"  value="<?=$product_id?>"></input>
+						<input style="display: none" name="table"  value="product"></input>
+						<input style="display: none" name="field"  value="product_id"></input>
+						<input style="display: none" name="value"  value="<?=$product_id?>"></input>
 					</form>
 				<?php
 					endif;
@@ -90,7 +92,7 @@
 
 			<!-- Review list -->
 			<?php
-				$qry = "select name, message from review
+				$qry = "select name, message, review_id from review
 						inner join user on user_id = review.added_by
 						where product_id=" . $product_id;
 				$reviews = $connection->query($qry);
@@ -102,8 +104,16 @@
 						<?php
 							if($is_moderator):
 						?>
+						<form class=actionButton>
 							<button class="save rounded">Mentés</button>
+						</form>
+						<form class=actionButton style="margin-right: 1%;" action="controller/delItem.php">
 							<button class="delete rounded">Értékelés törlése</button>
+							<input style="display: none" name="table"  value="review"></input>
+							<input style="display: none" name="field"  value="review_id"></input>
+							<input style="display: none" name="value"  value="<?=$r['review_id']?>"></input>
+							<input style="display: none" name="redirect"  value="../item.php?id=<?=$product_id?>"></input>
+						</form>
 						<?php
 							endif;
 						?>
