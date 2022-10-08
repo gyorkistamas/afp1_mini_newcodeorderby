@@ -32,6 +32,8 @@ if (!isLoggedIn())
 
 <body>
 
+	<?php require "../menubar.php"; ?>
+
 	<div class="container cardpart text-white">
 		<div class="row">
 			<div class="col-12 text-center">
