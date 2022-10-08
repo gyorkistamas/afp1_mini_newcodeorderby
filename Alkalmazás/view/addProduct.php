@@ -32,10 +32,12 @@ if (!isLoggedIn())
 
 <body>
 
+	<!-- Menü sor -->
 	<div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
-        <?php require '../menubar.php';?>
-    </div>
+		<?php require '../menubar.php';?>
+	</div>
 
+	<!-- Termék hozzáadása űrlap -->
 	<div class="container cardpart text-white">
 		<div class="row">
 			<div class="col-12 text-center">
@@ -59,7 +61,8 @@ if (!isLoggedIn())
 			<div class="row">
 				<div class="col-12">
 					<div class="form-floating col-12 text-black">
-						<textarea class="form-control h-25" id="productDesc" name="productDesc" placeholder="Ez egy leírás" rows="10" required></textarea>
+						<textarea class="form-control h-25" id="productDesc" name="productDesc"
+							placeholder="Ez egy leírás" rows="10" required></textarea>
 						<label for="productDesc">Termék leírása*</label>
 					</div>
 				</div>
@@ -69,6 +72,8 @@ if (!isLoggedIn())
 				<div class="col-12">
 					<div class="form-floating col-12 text-black">
 						<button class="btn btn-success" type="submit">Küldés</button>
+						<br>
+						<h6 class="text-danger">*: a mező kitöltése kötelező</h6>
 					</div>
 				</div>
 			</div>
