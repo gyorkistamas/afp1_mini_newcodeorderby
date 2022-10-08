@@ -1,6 +1,7 @@
 
 <?php
 
+require 'controller/dbms.php';
 require 'controller/userLoggedIn.php';
 $status = isLoggedIn();
 
@@ -19,7 +20,19 @@ if ( isset($_POST['LogoutBtn']) ) {
 
 if ( isset($_POST['LoginBtn']) ) {
     header("Location: view/auth.php");
- }
+}
+
+$btnViewProduct = "<button class='btn btn-info'>Termék megtekintése</button>";
+
+$con = connect("review site", "root", "", 3306);
+
+$query = "SELECT p.product_name, p.description, u.name 
+            FROM product AS p INNER JOIN user AS u 
+            ON p.added_by = u.user_id";
+
+
+$execQuery = mysqli_query($con, $query);
+$products = mysqli_fetch_all($execQuery); //null;
 
 
 ?>
@@ -43,30 +56,57 @@ if ( isset($_POST['LoginBtn']) ) {
 
 <body>
 
-    
-    <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">
+    <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
         <?php require 'menubar.php';?>
     </div>
-
     
-    <h1 class='text-white'>Felhasználó adatai:</h1>
+    <h1 class='text-white'>Jelenlegi termékek:</h1>
 
+    <div style="width: 75%; height: 600px; background-color: rgba(0, 0, 0, 0.7); margin-top: 5%; margin-left: auto; margin-right: auto; border-radius: 15%; padding: 5%;">
 
-    <?php 
-    if ( isset($_SESSION['UserData']) ) {
-        $userData = $_SESSION['UserData'];
-        foreach ($userData as $key => $value) {
-            echo "<h3 class='text-white'>${key}: ${value}</h3>";
-        }
-    }
-    else {
-        echo "<h2 class='text-white'>Hoppá! Nem vagy bejelentkezve!</h2>";
-        
-    }
+        <?php 
+            // if ( isset($_SESSION['UserData']) ) {
+            //     $userData = $_SESSION['UserData'];
+            //     foreach ($userData as $key => $value) {
+            //         echo "<h3 class='text-white'>${key}: ${value}</h3>";
+            //     }
+            // }
+            // else {
+            //     echo "<h2 class='text-white'>Hoppá! Nem vagy bejelentkezve!</h2>";
+                
+            // }
+
+            
+            
+            // echo "<h1 class='text-white'> Termkék száma: ".count($products)."</h1>"
+
+            if ( $products == null || count($products) == 0 ) {
+                echo "<h2 class='text-white'>Hoppá! Még nem töltött fel senki sem terméket!</h2>";
+            }
+            else 
+            {
+                for ($i = 0; $i < count($products); $i++) {
+                    array_push($products[$i], $btnViewProduct);
+                }
+
+                for ($i=0; $i < count($products); $i++) { 
+                    echo "<h2 class='text-white'> Termék neve: ".$products[$i][0]."</h2>";
+                    echo "<hr class='border border-primary border-3 opacity-75'>";
+                    echo "<h3 class='text-white'> Leírás: ".$products[$i][1]."</h3>";
+                    echo "<h4 class='text-white'> Hozzáadta: ".$products[$i][2]."</h4>";
+
+                    echo "<a href='item.php'>".$products[$i][3]."</a>";
+                }
+
+            }
+
+        ?>
+
+    </div>
     
-    ?>
 
     
 </body>
 
 </html>
+
