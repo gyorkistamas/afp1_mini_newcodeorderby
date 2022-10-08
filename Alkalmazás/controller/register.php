@@ -21,7 +21,7 @@
 
             //Megnézzük, van-e ilyen felhasználó már:
 
-            $con = connect('review_site', 'root', '', 3306);
+            $con = connect();
 
             $query = "SELECT * FROM user WHERE email LIKE '".$regEmail."'";
             $result = mysqli_query($con, $query);
