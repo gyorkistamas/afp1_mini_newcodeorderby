@@ -30,11 +30,9 @@ if (isLoggedIn()) {
 
 <body>
 
-    <!-- Ide majd a menüsor -->
-
-    <!-- Menüsör placeholder -->
+    <!-- Menüsor -->
     <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">
-
+    <?php require "../menubar.php"; ?>
     </div>
 
 
