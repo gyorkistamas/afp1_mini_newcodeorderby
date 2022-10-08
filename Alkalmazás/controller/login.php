@@ -23,18 +23,19 @@
         {
             //Felhasználó adatainak lekérése az adatbázisból a session létrehozásához:
 
-            $query = "SELECT name, email, password, moderator FROM user WHERE email LIKE '".$loginEmail."'";
+            $query = "SELECT user_id, name, email, password, moderator FROM user WHERE email LIKE '".$loginEmail."'";
             $aggregate = mysqli_query($con, $query);
             $aggregates = mysqli_fetch_row($aggregate);
 
-            $name = $aggregates[0];
-            $email = $aggregates[1];
-            $password = $aggregates[2];
-            $role = $aggregates[3] == 0 ? "User" : "Moderator";
+            $id = $aggregates[0];
+            $name = $aggregates[1];
+            $email = $aggregates[2];
+            $password = $aggregates[3];
+            $role = $aggregates[4] == 0 ? "User" : "Moderator";
 
             //Felhasználó adatainak eltárolása egy tömbben és az továbbadása Session változóként:
             
-            $UserData = array('Name' => $name, 'Email' => $email, 'Password' => $password, 'Role' => $role);
+            $UserData = array('Id' => $id, 'Name' => $name, 'Email' => $email, 'Password' => $password, 'Role' => $role);
             session_start();
             $_SESSION['UserData'] = $UserData;
             header("Location: ../index.php");
