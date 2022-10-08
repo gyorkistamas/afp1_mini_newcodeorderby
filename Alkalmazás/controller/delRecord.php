@@ -1,5 +1,5 @@
 <?php
-	session_start();	// debug csalás
+	//session_start();	// debug csalás
 	if(session_status() === PHP_SESSION_NONE || $_SERVER["REQUEST_METHOD"] != "GET" ||
 		!array_key_exists('table', $_GET) ||
 		!array_key_exists('field', $_GET) ||
