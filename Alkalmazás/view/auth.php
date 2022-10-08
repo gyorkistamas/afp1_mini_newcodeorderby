@@ -31,7 +31,7 @@ if (isLoggedIn()) {
 <body>
 
     <!-- Menüsor -->
-    <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">
+    <div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
     <?php require "../menubar.php"; ?>
     </div>
 
