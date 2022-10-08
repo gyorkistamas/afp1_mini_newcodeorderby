@@ -62,7 +62,7 @@ $products = mysqli_fetch_all($execQuery); //null;
     
     <h1 class='text-white' style='padding-top: 2.5%; text-align: center;' >Jelenlegi termékek:</h1>
 
-    <div class='cardpart' style="width: 75%; height: 600px; background-color: rgba(0, 0, 0, 0.7); margin-top: 2.5%; margin-left: auto; margin-right: auto; padding: 5%;">
+    <div class='cardpart' style="width: 75%; background-color: rgba(0, 0, 0, 0.7); margin-top: 2.5%; margin-left: auto; margin-right: auto; padding: 5%;">
 
         <?php 
             // if ( isset($_SESSION['UserData']) ) {
