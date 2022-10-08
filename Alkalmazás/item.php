@@ -35,7 +35,7 @@
 		<body>
 			<!-- -->
 			<div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7);">
-				<?php require 'menubar.php';?>
+				<?php /*require 'menubar.php';*/?>
 			</div>
 			<!-- -->
 			<!-- Item main -->
@@ -51,18 +51,24 @@
 				?>
 				<hr size=4px></hr>
 				<div id=item_body>
+					<!--
 					<img id=item_img src="../Források/kép/stock_item.jpg">
+					-->
 					<span id="item_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
 						<?=$item["description"]?>
 					</span>
 				</div>
+				<!--
 				<?php
+				/*
 					if($is_moderator):
 				?>
 					<input type=file></input>
 				<?php
 					endif;
+				*/
 				?>
+				-->
 			</div>
 
 			<!-- Contribute -->
