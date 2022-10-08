@@ -142,7 +142,7 @@ Rendszerszereplők:
       --
       -- Adatbázis: `review site`
       --
-      CREATE DATABASE IF NOT EXISTS `review site` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+      CREATE DATABASE IF NOT EXISTS `review_site` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
       USE `review site`;
 
       -- --------------------------------------------------------
