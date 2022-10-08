@@ -44,8 +44,13 @@
 				<?php
 					if($is_moderator):
 				?>
-					<button class="save rounded">Mentés</button>
-					<button class="delete rounded">Termék törlése</button>
+					<form class=actionButton>
+						<button class="save rounded">Mentés</button>
+					</form>
+					<form class=actionButton style="margin-right: 1%;" action="controller/delItem.php">
+						<button class="delete rounded">Termék&nbsptörlése</button>
+						<input style="display: none" name="product_id"  value="<?=$product_id?>"></input>
+					</form>
 				<?php
 					endif;
 				?>
