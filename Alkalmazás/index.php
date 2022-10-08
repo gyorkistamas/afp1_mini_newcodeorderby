@@ -3,7 +3,7 @@
 
 require 'controller/dbms.php';
 require 'controller/userLoggedIn.php';
-$status = isLoggedIn();
+//$status = isLoggedIn();
 
 
 
@@ -24,7 +24,7 @@ if ( isset($_POST['LoginBtn']) ) {
 
 $btnViewProduct = "<button class='btn btn-info'>Termék megtekintése</button>";
 
-$con = connect("review site", "root", "", 3306);
+$con = connect("review_site", "afp", "password", 3306);
 
 $query = "SELECT p.product_name, p.description, u.name 
             FROM product AS p INNER JOIN user AS u 
@@ -60,9 +60,9 @@ $products = mysqli_fetch_all($execQuery); //null;
         <?php require 'menubar.php';?>
     </div>
     
-    <h1 class='text-white'>Jelenlegi termékek:</h1>
+    <h1 class='text-white' style='padding-top: 2.5%; text-align: center;' >Jelenlegi termékek:</h1>
 
-    <div style="width: 75%; height: 600px; background-color: rgba(0, 0, 0, 0.7); margin-top: 5%; margin-left: auto; margin-right: auto; border-radius: 15%; padding: 5%;">
+    <div class='cardpart' style="width: 75%; height: 600px; background-color: rgba(0, 0, 0, 0.7); margin-top: 2.5%; margin-left: auto; margin-right: auto; padding: 5%;">
 
         <?php 
             // if ( isset($_SESSION['UserData']) ) {
@@ -91,11 +91,14 @@ $products = mysqli_fetch_all($execQuery); //null;
 
                 for ($i=0; $i < count($products); $i++) { 
                     echo "<h2 class='text-white'> Termék neve: ".$products[$i][0]."</h2>";
+
                     echo "<hr class='border border-primary border-3 opacity-75'>";
+                    
                     echo "<h3 class='text-white'> Leírás: ".$products[$i][1]."</h3>";
                     echo "<h4 class='text-white'> Hozzáadta: ".$products[$i][2]."</h4>";
-
                     echo "<a href='item.php'>".$products[$i][3]."</a>";
+
+                    echo "<hr class='border border-primary border-5 opacity-75'>";
                 }
 
             }
