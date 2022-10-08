@@ -31,7 +31,7 @@ $insertProduct = "INSERT INTO product (product_name, description, added_by) VALU
 try {
 
 	$operation = mysqli_query($con, $insertProduct);
-	header("Location: ../view/addeddSuccess.php");
+	header("Location: ../view/addedSuccess.php");
 
 } catch (\Throwable $th) {
 	echo "Hiba lépett fel az adatbázisba történő felvitel során!";
