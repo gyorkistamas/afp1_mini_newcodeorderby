@@ -4,7 +4,7 @@ require "../controller/userLoggedIn.php";
 
 if (!isLoggedIn())
 {
-	header("Location: notLoggedIn.php");
+	header("Location: auth.php");
 }
 
 ?>
@@ -22,8 +22,10 @@ if (!isLoggedIn())
 	<link rel="icon" type="image/x-icon" href="../imgs/favicon.png">
 	<link rel="stylesheet" type="text/css" href="../bootstrap,jquery/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../styles/global.css">
+	<link rel="stylesheet" type="text/css" href="../styles/addProduct.css">
 	<script src="../bootstrap,jquery/jquery-3.6.1.min.js"></script>
 	<script src="../bootstrap,jquery/bootstrap.min.js"></script>
+
 
 	<title>Termék hozzáadása</title>
 </head>
@@ -38,7 +40,7 @@ if (!isLoggedIn())
 			</div>
 		</div>
 
-		<form method="POST" action="">
+		<form method="POST" action="../controller/addProduct.php">
 			<div class="row">
 				<div class="col-12">
 					<div class="form-floating col-12 text-black">
@@ -48,6 +50,25 @@ if (!isLoggedIn())
 					</div>
 				</div>
 			</div>
+
+
+			<div class="row">
+				<div class="col-12">
+					<div class="form-floating col-12 text-black">
+						<textarea class="form-control h-25" id="productDesc" name="productDesc" placeholder="Ez egy leírás" rows="10" required></textarea>
+						<label for="productDesc">Termék leírása*</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row text-center">
+				<div class="col-12">
+					<div class="form-floating col-12 text-black">
+						<button class="btn btn-success" type="submit">Küldés</button>
+					</div>
+				</div>
+			</div>
+
 		</form>
 	</div>
 
