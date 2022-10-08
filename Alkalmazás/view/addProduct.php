@@ -32,7 +32,9 @@ if (!isLoggedIn())
 
 <body>
 
-	<?php require "../menubar.php"; ?>
+	<div style="width: 100%; height: 70px; background-color: rgba(0, 0, 0, 0.7); text-align: center;">
+        <?php require '../menubar.php';?>
+    </div>
 
 	<div class="container cardpart text-white">
 		<div class="row">
