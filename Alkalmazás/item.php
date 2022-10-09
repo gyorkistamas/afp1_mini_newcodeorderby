@@ -44,8 +44,14 @@
 				<?php
 					if($is_moderator):
 				?>
-					<form class=actionButton>
+					<form class=actionButton  onsubmit="saveItem();" action="controller/modRecord.php">
 						<button class="save rounded">Mentés</button>
+						<input style="display: none" name="table"  value="product"></input>
+						<input style="display: none" name="field"  value="product_id"></input>
+						<input style="display: none" name="value"  value="<?=$product_id?>"></input>
+						<input style="display: none" name="redirect"  value="../item.php?id=<?=$product_id?>"></input>
+						<input id=GET_item_name style="display: none" name="product_name"  value=""></input>
+						<input id=GET_item_desc style="display: none" name="description"  value=""></input>
 					</form>
 					<form class=actionButton style="margin-right: 1%;" action="controller/delItem.php">
 						<button class="delete rounded">Termék&nbsptörlése</button>
@@ -104,10 +110,16 @@
 						<?php
 							if($is_moderator):
 						?>
-						<form class=actionButton>
-							<button class="save rounded">Mentés</button>
+						<!--<form class=actionButton action="controller/modRecord.php.php">-->
+						<form class=actionButton onsubmit="saveReview(event);" action="controller/modRecord.php">
+							<button type=submit class="save rounded">Mentés</button>
+							<input style="display: none" name="table"  value="review"></input>
+							<input style="display: none" name="field"  value="review_id"></input>
+							<input style="display: none" name="value"  value="<?=$r['review_id']?>"></input>
+							<input style="display: none" name="redirect"  value="../item.php?id=<?=$product_id?>"></input>
+							<input class="send_msg" style="display: none" name="message"  value=""></input>
 						</form>
-						<form class=actionButton style="margin-right: 1%;" action="controller/delItem.php">
+						<form class=actionButton style="margin-right: 1%;" action="controller/delRecord.php">
 							<button class="delete rounded">Értékelés törlése</button>
 							<input style="display: none" name="table"  value="review"></input>
 							<input style="display: none" name="field"  value="review_id"></input>
@@ -119,7 +131,7 @@
 						?>
 					</div>
 					<hr size=4px></hr>
-					<span id="item_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
+					<span class="review_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
 						<?=$r["message"]?>
 					<span>
 				</div>
@@ -181,6 +193,26 @@
 				}
 				function is_moderator(){	// debug implementation
 					return true;
+				}
+
+				function saveItem(){
+					hName = document.getElementById('item_name');
+					var hGETItemName = document.getElementById('GET_item_name');
+					var hDesc = document.getElementById('item_desc');
+					var hGETItemDesc = document.getElementById('GET_item_desc');
+					GET_item_name.setAttribute('value', hName.innerText);
+					GET_item_desc.setAttribute('value', hDesc.innerText);
+				}
+				function saveReview(e){
+					//e.preventDefault();
+					var hDesc = e.target;
+					while(!hDesc.classList.contains('bubble')){
+						hDesc = hDesc.parentElement;
+					}
+					var hRoot = hDesc;
+					hDesc = hRoot.getElementsByClassName('review_desc')[0];
+					var hMsg = hRoot.getElementsByClassName('send_msg')[0];
+					hMsg.setAttribute('value', hDesc.innerText);
 				}
 			</script>
 		</body>
