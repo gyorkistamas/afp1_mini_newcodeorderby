@@ -1,8 +1,8 @@
 <?php
     $status = isLoggedIn();
 
-    $route = explode("/", $_SERVER['PHP_SELF']);
-    $thisPage = end($route);
+    $thisPage = basename($_SERVER['PHP_SELF']);
+	
 
     $styleAttr = "margin-top: 1%";
 
