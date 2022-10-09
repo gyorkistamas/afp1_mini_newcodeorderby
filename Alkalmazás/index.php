@@ -5,24 +5,13 @@ require 'controller/dbms.php';
 require 'controller/userLoggedIn.php';
 
 
-
-
-
-//Kijelentkezés megvalósítása:
-
-if ( isset($_POST['LogoutBtn']) ) {
-    unset($_SESSION['UserData']);
-    session_destroy();
-    header("Location: view/auth.php");
-}
-
 //Bejelentkező oldalra navigálás:
 
 if ( isset($_POST['LoginBtn']) ) {
     header("Location: view/auth.php");
 }
 
-//'Termék megtekintése' eltárolása egy változóban:
+//'Termék megtekintése' gomb eltárolása egy változóban:
 
 $btnViewProduct = "<button class='btn btn-success'>Termék megtekintése</button>";
 
@@ -30,9 +19,9 @@ $btnViewProduct = "<button class='btn btn-success'>Termék megtekintése</button
 
 $con = connect("review_site", "afp", "password", 3306);
 
-$query = "SELECT p.product_name, p.description, u.name 
-            FROM product AS p INNER JOIN user AS u 
-            ON p.added_by = u.user_id";
+$query = "SELECT p.product_id, p.product_name, p.description, u.name 
+          FROM product AS p INNER JOIN user AS u 
+          ON p.added_by = u.user_id";
 
 
 $execQuery = mysqli_query($con, $query);
@@ -42,7 +31,7 @@ $execQuery = mysqli_query($con, $query);
     Azért így van implementálva, mert ezzel a módszerrel csak végig kell iterálni a tömböket tartalmazó tömbbön...
 */
 
-$products = mysqli_fetch_all($execQuery); //null;
+$products = mysqli_fetch_all($execQuery); //null érték használata a debugoláshoz;
 
 
 ?>
@@ -61,6 +50,17 @@ $products = mysqli_fetch_all($execQuery); //null;
         <script src="./bootstrap,jquery/jquery-3.6.1.min.js"></script>
         <script src="./bootstrap,jquery/bootstrap.min.js"></script>
 
+        <style>
+
+            @media screen and (max-width: 600px) {
+                div.col-4 {
+                    width: 90%;
+                }
+            }
+
+        </style>
+
+
         <title>Főoldal</title>
     </head>
 
@@ -70,28 +70,12 @@ $products = mysqli_fetch_all($execQuery); //null;
             <?php require 'menubar.php';?>
         </div>
         
-        <h1 class='text-white' style='padding-top: 2.5%; text-align: center;' >Jelenlegi termékek:</h1>
+        <h1 class='text-white' style='padding-top: 2.5%; text-align: center;'>Jelenlegi termékek:</h1>
 
         <div class='cardpart container' style="width: 75%; background-color: rgba(0, 0, 0, 0.7); margin-top: 2.5%; margin-left: auto; margin-right: auto; padding: 5%;">
 
             <?php
 
-                #region Kukázandó kommentek
-                // if ( isset($_SESSION['UserData']) ) {
-                //     $userData = $_SESSION['UserData'];
-                //     foreach ($userData as $key => $value) {
-                //         echo "<h3 class='text-white'>${key}: ${value}</h3>";
-                //     }
-                // }
-                // else {
-                //     echo "<h2 class='text-white'>Hoppá! Nem vagy bejelentkezve!</h2>";
-                    
-                // }
-
-                
-                
-                // echo "<h1 class='text-white'> Termkék száma: ".count($products)."</h1>"
-                #endregion
                 if ( $products == null || count($products) == 0 ) {
                     echo "<h2 class='text-white'>Hoppá! Még nem töltött fel senki sem terméket!</h2>";
                 }
@@ -106,29 +90,18 @@ $products = mysqli_fetch_all($execQuery); //null;
                     echo "<div class='row justify-items-evenly'>";
                         
                             for ($i=0; $i < count($products); $i++) { 
-                                #region Kommentelt rész
 
-                                // echo "<h2 class='text-white'> Termék neve: ".$products[$i][0]."</h2>";
-
-                                // echo "<hr class='border border-primary border-3 opacity-75'>";
-                                
-                                // echo "<h3 class='text-white'> Leírás: ".$products[$i][1]."</h3>";
-                                // echo "<h4 class='text-white'> Hozzáadta: ".$products[$i][2]."</h4>";
-                                // echo "<a href='item.php'>".$products[$i][3]."</a>";
-
-                                // echo "<hr class='border border-primary border-5 opacity-75'>";
-                                #endregion
-                                echo "<div class='col-4'>";
+                                echo "<div class='col-md-6 col-12 col-xl-4'>";
 
                                     echo "<div class='card text-bg-dark mb-3' style='width: 18rem;'>";
 
-                                        echo "<div class='card-header'>".$products[$i][2]."</div>";
+                                        echo "<div class='card-header'>".$products[$i][3]."</div>";
 
                                         echo "<div class='card-body'>";
 
-                                            echo "<h5 class='card-title'>".$products[$i][0]."</h5>";
-                                            echo "<p class='card-text'>".$products[$i][1]."</p>";
-                                            echo "<a href='item.php'>".$products[$i][3]."</a>";
+                                            echo "<h5 class='card-title'>".$products[$i][1]."</h5>";
+                                            echo "<p class='card-text'>".$products[$i][2]."</p>";
+                                            echo "<a href='item.php?product_Id=".$products[$i][0]."'>".$products[$i][4]."</a>";
 
                                         echo "</div>";
 
