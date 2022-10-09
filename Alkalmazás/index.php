@@ -50,17 +50,6 @@ $products = mysqli_fetch_all($execQuery); //null érték használata a debugolá
         <script src="./bootstrap,jquery/jquery-3.6.1.min.js"></script>
         <script src="./bootstrap,jquery/bootstrap.min.js"></script>
 
-        <style>
-
-            @media screen and (max-width: 600px) {
-                div.col-4 {
-                    width: 90%;
-                }
-            }
-
-        </style>
-
-
         <title>Főoldal</title>
     </head>
 
