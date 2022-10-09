@@ -8,11 +8,11 @@
 			$connection = std_connect();
 
 			# --- Debug values ---
-			$product_id = 1;
+			$productId = 1;
 			$is_moderator = true;
 			###
 
-			$item = $connection->query("select * from product where product_id=" . $product_id)->fetch_assoc();
+			$item = $connection->query("select * from product where product_id=" . $productId)->fetch_assoc();
 		?>
 		<head>
 			<title><?=$item["product_name"]?> | leírás</title>
@@ -44,20 +44,20 @@
 				<?php
 					if($is_moderator):
 				?>
-					<form class=actionButton  onsubmit="saveItem();" action="controller/modRecord.php">
+					<form class=actionButton  onsubmit="SaveItem();" action="controller/modRecord.php">
 						<button class="save rounded">Mentés</button>
 						<input style="display: none" name="table"  value="product"></input>
 						<input style="display: none" name="field"  value="product_id"></input>
-						<input style="display: none" name="value"  value="<?=$product_id?>"></input>
-						<input style="display: none" name="redirect"  value="../item.php?id=<?=$product_id?>"></input>
+						<input style="display: none" name="value"  value="<?=$productId?>"></input>
+						<input style="display: none" name="redirect"  value="../item.php?id=<?=$productId?>"></input>
 						<input id=GET_item_name style="display: none" name="product_name"  value=""></input>
 						<input id=GET_item_desc style="display: none" name="description"  value=""></input>
 					</form>
-					<form class=actionButton style="margin-right: 1%;" action="controller/delItem.php">
+					<form class=actionButton style="margin-right: 1%;" action="controller/delRecord.php">
 						<button class="delete rounded">Termék&nbsptörlése</button>
 						<input style="display: none" name="table"  value="product"></input>
 						<input style="display: none" name="field"  value="product_id"></input>
-						<input style="display: none" name="value"  value="<?=$product_id?>"></input>
+						<input style="display: none" name="value"  value="<?=$productId?>"></input>
 					</form>
 				<?php
 					endif;
@@ -89,9 +89,9 @@
 				<form action="controller/addReview.php" method=post>
 					<div>
 						<h1 class=h1>Hagyja ön is itt a véleményét:</h1>
-						<button class=rounded type=button onClick="contribute_attempt()">+</button>
+						<button class=rounded type=button onClick="ContributeAttempt()">+</button>
 					</div>
-					<input style="display: none;" name=product_id value="<?=$product_id?>"></input>
+					<input style="display: none;" name=product_id value="<?=$productId?>"></input>
 				</form>
 				<div id=contribute_error></div>
 			</div>
@@ -100,7 +100,7 @@
 			<?php
 				$qry = "select name, message, review_id from review
 						inner join user on user_id = review.added_by
-						where product_id=" . $product_id;
+						where product_id=" . $productId;
 				$reviews = $connection->query($qry);
 				foreach($reviews as $r):
 			?>
@@ -111,12 +111,12 @@
 							if($is_moderator):
 						?>
 						<!--<form class=actionButton action="controller/modRecord.php.php">-->
-						<form class=actionButton onsubmit="saveReview(event);" action="controller/modRecord.php">
+						<form class=actionButton onsubmit="SaveReview(event);" action="controller/modRecord.php">
 							<button type=submit class="save rounded">Mentés</button>
 							<input style="display: none" name="table"  value="review"></input>
 							<input style="display: none" name="field"  value="review_id"></input>
 							<input style="display: none" name="value"  value="<?=$r['review_id']?>"></input>
-							<input style="display: none" name="redirect"  value="../item.php?id=<?=$product_id?>"></input>
+							<input style="display: none" name="redirect"  value="../item.php?id=<?=$productId?>"></input>
 							<input class="send_msg" style="display: none" name="message"  value=""></input>
 						</form>
 						<form class=actionButton style="margin-right: 1%;" action="controller/delRecord.php">
@@ -124,7 +124,7 @@
 							<input style="display: none" name="table"  value="review"></input>
 							<input style="display: none" name="field"  value="review_id"></input>
 							<input style="display: none" name="value"  value="<?=$r['review_id']?>"></input>
-							<input style="display: none" name="redirect"  value="../item.php?id=<?=$product_id?>"></input>
+							<input style="display: none" name="redirect"  value="../item.php?id=<?=$productId?>"></input>
 						</form>
 						<?php
 							endif;
@@ -147,9 +147,9 @@
 			<script>
 				let hContribute = document.getElementById('contribute');
 
-				function contribute_attempt(){
-					if(!is_logged_in()){
-						login_popup_init();
+				function ContributeAttempt(){
+					if(!IsLoggedIn()){
+						LoginPopupInit();
 						return false;
 					}
 
@@ -159,7 +159,7 @@
 					bT.placeholder = "Ide gépelhet...";
 					var hB = hContribute.getElementsByTagName('button')[0];
 					hB.innerText = "Publikálás";
-					hB.onclick = contribute;
+					hB.onclick = Contribute;
 					// ?!
 					//hB.style.fontSize = Math.floor((parseInt(hB.style.fontSize) - 2)) + "rem";
 
@@ -167,7 +167,7 @@
 
 					return true;
 				}
-				function contribute(){
+				function Contribute(){
 					if(document.getElementById('cont_message').value == ""){
 						document.getElementById('contribute_error').innerText = "*Az értékelés szövege üres, melynek kitöltése kötelező";
 						return
@@ -175,7 +175,7 @@
 					hContribute.getElementsByTagName('form')[0].submit();
 				}
 
-				function login_popup_init(){
+				function LoginPopupInit(){
 					console.log('pop init')
 					var hPopup = document.body.appendChild(document.createElement('div'));
 					var popupHtml = `<?php require 'loginPopup.php'?>`;
@@ -183,19 +183,19 @@
 					hPopup.innerHTML = popupHtml;
 				}
 
-				function login_popup_die(){
+				function LoginPopupDie(){
 					document.getElementById('login_popup').remove();
 				}
 
-				function is_logged_in(){	// debug implementation
+				function IsLoggedIn(){	// debug implementation
 					return true;
 					//return false;
 				}
-				function is_moderator(){	// debug implementation
+				function IsModerator(){	// debug implementation
 					return true;
 				}
 
-				function saveItem(){
+				function SaveItem(){
 					hName = document.getElementById('item_name');
 					var hGETItemName = document.getElementById('GET_item_name');
 					var hDesc = document.getElementById('item_desc');
@@ -203,7 +203,7 @@
 					GET_item_name.setAttribute('value', hName.innerText);
 					GET_item_desc.setAttribute('value', hDesc.innerText);
 				}
-				function saveReview(e){
+				function SaveReview(e){
 					//e.preventDefault();
 					var hDesc = e.target;
 					while(!hDesc.classList.contains('bubble')){
