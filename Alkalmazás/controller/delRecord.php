@@ -1,6 +1,7 @@
 <?php
 	//session_start();	// debug csalás
-	if(session_status() === PHP_SESSION_NONE || $_SERVER["REQUEST_METHOD"] != "GET" ||
+	require 'userLoggedIn.php';
+	if(!isModerator() || $_SERVER["REQUEST_METHOD"] != "GET" ||
 		!array_key_exists('table', $_GET) ||
 		!array_key_exists('field', $_GET) ||
 		!array_key_exists('value', $_GET)

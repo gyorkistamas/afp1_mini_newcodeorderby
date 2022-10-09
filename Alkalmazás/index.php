@@ -7,6 +7,7 @@ require 'controller/userLoggedIn.php';
 
 
 
+
 //Kijelentkezés megvalósítása:
 
 if ( isset($_POST['LogoutBtn']) ) {

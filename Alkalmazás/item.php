@@ -5,11 +5,14 @@
 		-->
 		<?php
 			require 'controller/dbms.php';
+			require 'controller/userLoggedIn.php';
+
 			$connection = std_connect();
+			$isModerator = isModerator();
 
 			# --- Debug values ---
 			$productId = 1;
-			$is_moderator = true;
+			#$is_moderator = true;
 			###
 
 			$item = $connection->query("select * from product where product_id=" . $productId)->fetch_assoc();
@@ -40,9 +43,9 @@
 			<!-- -->
 			<!-- Item main -->
 			<div id=item_bubble class="bubble rounded">
-				<h1 id=item_name class=h1 <?=($is_moderator ? "contentEditable=true" : "")?>><?=$item["product_name"]?></h1>
+				<h1 id=item_name class=h1 <?=($isModerator ? "contentEditable=true" : "")?>><?=$item["product_name"]?></h1>
 				<?php
-					if($is_moderator):
+					if($isModerator):
 				?>
 					<form class=actionButton  onsubmit="SaveItem();" action="controller/modRecord.php">
 						<button class="save rounded">Mentés</button>
@@ -67,14 +70,14 @@
 					<!--
 					<img id=item_img src="../Források/kép/stock_item.jpg">
 					-->
-					<span id="item_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
+					<span id="item_desc" class=h3 <?=($isModerator ? "contentEditable=true" : "")?>>
 						<?=$item["description"]?>
 					</span>
 				</div>
 				<!--
 				<?php
 				/*
-					if($is_moderator):
+					if($isModerator):
 				?>
 					<input type=file></input>
 				<?php
@@ -108,7 +111,7 @@
 					<div class=review_title>
 						<h1 class=h1>Írta: <h2 class=h2><?=$r["name"]?></h2></h1>
 						<?php
-							if($is_moderator):
+							if($isModerator):
 						?>
 						<!--<form class=actionButton action="controller/modRecord.php.php">-->
 						<form class=actionButton onsubmit="SaveReview(event);" action="controller/modRecord.php">
@@ -131,7 +134,7 @@
 						?>
 					</div>
 					<hr size=4px></hr>
-					<span class="review_desc" class=h3 <?=($is_moderator ? "contentEditable=true" : "")?>>
+					<span class="review_desc" class=h3 <?=($isModerator ? "contentEditable=true" : "")?>>
 						<?=$r["message"]?>
 					<span>
 				</div>
@@ -176,9 +179,9 @@
 				}
 
 				function LoginPopupInit(){
-					console.log('pop init')
+					//console.log('pop init')
 					var hPopup = document.body.appendChild(document.createElement('div'));
-					var popupHtml = `<?php require 'loginPopup.php'?>`;
+					var popupHtml = `<?php require 'view/loginPopup.php'?>`;
 					popupHtml = popupHtml.substr(0, popupHtml.length-1);
 					hPopup.innerHTML = popupHtml;
 				}
@@ -187,12 +190,11 @@
 					document.getElementById('login_popup').remove();
 				}
 
-				function IsLoggedIn(){	// debug implementation
-					return true;
-					//return false;
+				function IsLoggedIn(){
+					return <?=var_export(IsLoggedIn())?>;
 				}
-				function IsModerator(){	// debug implementation
-					return true;
+				function IsModerator(){
+					return <?=var_export($isModerator)?>;
 				}
 
 				function SaveItem(){
