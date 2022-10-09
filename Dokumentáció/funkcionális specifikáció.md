@@ -59,7 +59,8 @@
 | Lefedett használati eset | Követelmény | Követelmény azonosító(k) |
 | :---: | :---: | :---: |
 | A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal | M3 |
-| A felhasznó a böngészést választva kap egy listát minden már értékelt termékről. | böngésző || A felhasznó a keresett terméket megtalálva annak saját oldalán elolvashatja a mások álltal hagyott értékeléseket. | termék_leírás | M3 |
+| A felhasznó a böngészést választva kap egy listát minden már értékelt termékről. | böngésző | M3 |
+| A felhasznó a keresett terméket megtalálva annak saját oldalán elolvashatja a mások álltal hagyott értékeléseket. | termék_leírás | M3 |
 ### Üzemeltetői felülbírálás ###
 | Lefedett használati eset | Követelmény | Követelmény azonosító(k) |
 | :---: | :---: | :---: |
