@@ -14,6 +14,12 @@
         header("Location: view/addProduct.php");
     }
 
+    if ( isset($_POST['LogoutBtn']) ) {
+        unset($_SESSION['UserData']);
+        session_destroy();
+        header("Location: /");
+    }
+
     echo "<form action='' method='post'>";
 
         echo "<button style='".$styleAttr."; color: DarkSlateGray;' type='submit' name='HomePageBtn' class='btn btn-info'"
