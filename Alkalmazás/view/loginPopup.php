@@ -3,6 +3,6 @@
 	<p>Vélemény közzé tételre csak bejelentkezés után van lehetőség. Kérem jelentkezzen be vagy regisztráljon!</p>
 	<div>
 		<button class=rounded onClick="window.location = 'index.php'">Bejenetkezés</button>
-		<button class=rounded onClick="login_popup_die();">Mégsem</button>
+		<button class=rounded onClick="LoginPopupDie();">Mégsem</button>
 	<div>
 </div>
