@@ -56,13 +56,13 @@
 | A *felhasználó* a értékelni kívánt terméket kiválasztva megírja és publikálásja az értékelését. | termék_leírás | M4, M5 |
 | Mivel a termékről még egy értékelés sem készült, ezért a *felhasználó* hozzá adja a termék listához, az első (saját) értékelléssel egyetemben. | Hozzáadás | N/A |
 ### Termék böngészés ###
-| Lefedett használati eset | Követelmény |
-| :---: | :---: |
+| Lefedett használati eset | Követelmény | Követelmény azonosító(k) |
+| :---: | :---: | :---: |
 | A felhasznó megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal | M3 |
 | A felhasznó a böngészést választva kap egy listát minden már értékelt termékről. | böngésző || A felhasznó a keresett terméket megtalálva annak saját oldalán elolvashatja a mások álltal hagyott értékeléseket. | termék_leírás | M3 |
 ### Üzemeltetői felülbírálás ###
-| Lefedett használati eset | Követelmény |
-| :---: | :---: |
+| Lefedett használati eset | Követelmény | Követelmény azonosító(k) |
+| :---: | :---: | :---: |
 | A *moderátor* megnyitja az oldalt, itt több kattintható opció fogadja. | főoldal | M3 |
 | A *moderátor* miután a bejelentkezést választotta hitelesíti *profil* adatait. Innentől kezdve élhet moderátori jogkörével | főoldal | M2 |
 | A *moderátor* kikeresi a módosítani kívánt terméket. | böngésző | M3 |
