@@ -287,7 +287,8 @@ Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
  | Bejelentkezés __nem megfelelő email címmel__: | A weboldal felhívja a figyelmet az **email cím** helytelenségéről. |
  | Bejelentkezés __jelszó megadása nélkül__: | A *Bejelentkezés* gomb megnyomása után, a weboldal figyelmeztet arra, hogy a __jelszó mezőjének kitöltése kötelező__. |
  | Bejelentkezés __egy nem létező felhasználó adataival__: | A weboldal a *Sikertelen bejelentkezés* részre irányít át. |
- 
+
+*Bővebben a tesztelés mappában...* 
 
 ### 10.2 A tesztelési jegyzőkönyv kitöltésére egy sablon:
 
