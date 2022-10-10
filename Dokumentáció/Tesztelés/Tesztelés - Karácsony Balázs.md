@@ -1,4 +1,4 @@
-### Termék hozzáadása tesztelése
+### Termék hozzáadása funkció tesztelése:
 
 **Tesztelő:** Karácsony Balázs
 
@@ -10,8 +10,9 @@
 | __KB_t002__ | Termék hozzáadása __leírás kitöltése nélkül__: | Az alkalmazás felhívja a figyelmet a **termékhez tartozó leírás mező** kitöltésére. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
 | __KB_t003__ | Termék hozzáadása __termék megnevezés nélkül__: | A felület figyelmeztet, hogy töltsem ki a **Termék megnevezése** input mezőt. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
 
+<br/>
 
-### Bejelentkezés / regisztráció tesztelése
+### Bejelentkezés / regisztráció tesztelése:
 
 **Tesztelő:** Karácsony Balázs
 
@@ -31,3 +32,16 @@
 | __KB_t013__ | Bejelentkezés __nem megfelelő email címmel__: | A weboldal felhívja a figyelmet az **email cím** helytelenségéről. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
 | __KB_t014__ | Bejelentkezés __jelszó megadása nélkül__: | A *Bejelentkezés* gomb megnyomása után, a weboldal figyelmeztet arra, hogy a __jelszó mezőjének kitöltése kötelező__. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
 | __KB_t015__ | Bejelentkezés __egy nem létező felhasználó adataival__: | A weboldal a *Sikertelen bejelentkezés* részre irányít át. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
+
+<br/>
+
+### Termék megtekintése funkció tesztelése:
+
+**Tesztelő:** Karácsony Balázs
+
+**Tesztelés dátuma:** 2022.10.10
+
+| Teszteset azonosító | Teszteset | Elvárt eredmény | Tényleges eredmény | Megjegyzés |
+| ------------------- | --------- | --------------- | ------------------ | ---------- |
+| __KB_t016__ | 'item.php' elérése, bejelentkezés nélkül | Bejelentkezés szükségességére való felhívás, vagy a kezdőlapra navigálás. | Az oldal a kezdőlapra navigálja a felhasználőt. | Nem találtam hibát. |
+| __KB_t017__ | Értékelés publikálása mező kitöltés nélkül. | Az oldal figyelmeztet, a mező kitöltésének szükségességére. | Az oldal figyelmeztet pirossal, hogy: *"Az értékelés szövege üres, melynek kitöltése kötelező"* | Nem találtam semmi féle hibát itt. |
