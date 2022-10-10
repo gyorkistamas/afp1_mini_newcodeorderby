@@ -3,9 +3,6 @@
 
     $thisPage = basename($_SERVER['PHP_SELF']);
 	
-
-    $styleAttr = "margin-top: 1%";
-
     if ( isset($_POST['HomePageBtn']) ) {
         header("Location: ../index.php");
     }
@@ -21,19 +18,19 @@
     }
 ?>
 
-<form action='' method='post'>
-	<button style='<?=$styleAttr?>; color: DarkSlateGray;'
+<form id=menubar action='' method='post'>
+	<button style='color: DarkSlateGray;'
 		type='submit' name='HomePageBtn' class='btn btn-info'
         <?=($thisPage == 'index.php' ? 'disabled' : '')?>>Főoldal</button>
    		<?php if($status): ?>
-			<button style='<?=$styleAttr?>; color: DarkSlateGray;'
+			<button style='color: DarkSlateGray;'
 				type='submit' name='AddProductBtn' class='btn btn-info'
 			<?=($thisPage == 'addProduct.php' ? 'disabled' : '')?>>Termék hozzáadása</button> 
-            <button style='<?=$styleAttr?>' type='submit' name='LogoutBtn' class='btn btn-danger'>
+            <button type='submit' name='LogoutBtn' class='btn btn-danger'>
 				Kijelentkezés
 			</button>
 		<?php else:?>
-            <button style='<?=$styleAttr?>; color: DarkSlateGray;'
+            <button style='color: DarkSlateGray;'
 				type='submit' name='LoginBtn' class='btn btn-info'
 				<?=($thisPage == 'auth.php' ? 'disabled' : '')?>
 			>
