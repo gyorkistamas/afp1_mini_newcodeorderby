@@ -8,7 +8,7 @@
 | ------------------- | --------- | --------------- | ------------------ | ---------- |
 | __KB_t001__ | Termék hozzáadása __mezők kitöltése nélkül__: | Az oldal figyelmeztet, hogy töltsem ki az első előforduló input mezőt | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
 | __KB_t002__ | Termék hozzáadása __leírás kitöltése nélkül__: | Az alkalmazás felhívja a figyelmet a **termékhez tartozó leírás mező** kitöltésére. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
-| __KB_t003__ | Termék hozzáadása __termék megnevezés nélkül__: | A felület figyelmeztet, hogy töltsem ki a **Termék megnevezése** input mezőt. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket |
+| __KB_t003__ | Termék hozzáadása __termék megnevezés nélkül__: | A felület figyelmeztet, hogy töltsem ki a **Termék megnevezése** input mezőt. | Ugyanaz, mint az Elvárt eredmény szekcióban. | Nem találtam hibára utaló jeleket. |
 
 
 ### Bejelentkezés / regisztráció tesztelése
