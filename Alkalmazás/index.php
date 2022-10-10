@@ -66,7 +66,7 @@ $products = mysqli_fetch_all($execQuery); //null érték használata a debugolá
             <?php
 
                 if ( $products == null || count($products) == 0 ) {
-                    echo "<h2 class='text-white'>Hoppá! Még nem töltött fel senki sem terméket!</h2>";
+                    echo "<h2 class='text-white' style='text-align: center;'>Hoppá! Még nem töltött fel senki sem terméket!</h2>";
                 }
                 else {
 
