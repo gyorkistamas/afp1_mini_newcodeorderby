@@ -4,18 +4,23 @@
 			Creation Date: Wed Oct  5 10:10:44 AM CEST 2022
 		-->
 		<?php
+			if(!isset($_GET['product_Id'])){
+				header('Location: index.php');
+			}
 			require 'controller/dbms.php';
 			require 'controller/userLoggedIn.php';
 
 			$connection = std_connect();
 			$isModerator = isModerator();
-
-			# --- Debug values ---
-			$productId = 1;
-			#$is_moderator = true;
-			###
+			
+			$productId = $_GET['product_Id'];
 
 			$item = $connection->query("select * from product where product_id=" . $productId)->fetch_assoc();
+
+			# --- Debug values ---
+			#$productId = 1;
+			#$is_moderator = true;
+			###
 		?>
 		<head>
 			<title><?=$item["product_name"]?> | leírás</title>

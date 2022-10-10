@@ -1,11 +1,8 @@
 <?php
     $status = isLoggedIn();
 
-    $route = explode("/", $_SERVER['PHP_SELF']);
-    $thisPage = end($route);
-
-    $styleAttr = "margin-top: 1%";
-
+    $thisPage = basename($_SERVER['PHP_SELF']);
+	
     if ( isset($_POST['HomePageBtn']) ) {
         header("Location: ../index.php");
     }
@@ -19,16 +16,26 @@
         session_destroy();
         header("Location: /");
     }
-
-    echo "<form action='' method='post'>";
-
-        echo "<button style='".$styleAttr."; color: DarkSlateGray;' type='submit' name='HomePageBtn' class='btn btn-info'"
-        .($thisPage == 'index.php' ? 'disabled' : '').">Főoldal</button> ";
-    
-        echo $status ? "<button style='".$styleAttr."; color: DarkSlateGray;' type='submit' name='AddProductBtn' class='btn btn-info'".($thisPage == 'addProduct.php' ? 'disabled' : '').">Termék hozzáadása</button> 
-            <button style='".$styleAttr."' type='submit' name='LogoutBtn' class='btn btn-danger'>Kijelentkezés</button>": 
-                "<button style='".$styleAttr."; color: DarkSlateGray;' type='submit' name='LoginBtn' class='btn btn-info'".($thisPage == 'auth.php' ? 'disabled' : '').">Bejelentkezés/Regisztráció</button>";
-    
-    echo "</form>";
 ?>
+
+<form id=menubar action='' method='post'>
+	<button style='color: DarkSlateGray;'
+		type='submit' name='HomePageBtn' class='btn btn-info'
+        <?=($thisPage == 'index.php' ? 'disabled' : '')?>>Főoldal</button>
+   		<?php if($status): ?>
+			<button style='color: DarkSlateGray;'
+				type='submit' name='AddProductBtn' class='btn btn-info'
+			<?=($thisPage == 'addProduct.php' ? 'disabled' : '')?>>Termék hozzáadása</button> 
+            <button type='submit' name='LogoutBtn' class='btn btn-danger'>
+				Kijelentkezés
+			</button>
+		<?php else:?>
+            <button style='color: DarkSlateGray;'
+				type='submit' name='LoginBtn' class='btn btn-info'
+				<?=($thisPage == 'auth.php' ? 'disabled' : '')?>
+			>
+				Bejelentkezés/Regisztráció
+			</button>
+    	<?php endif; ?>
+</form>
 
