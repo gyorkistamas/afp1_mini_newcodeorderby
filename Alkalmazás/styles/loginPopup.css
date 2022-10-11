@@ -1,11 +1,10 @@
 #login_popup {
 	width: 60%;
 	position: fixed;
-	top: 0;
 	left: 0;
 	right: 0;
 	top: 30%;
-	margin: none;
+	background: rgba(0, 0, 0, 0.9);
 }
 	#login_popup>div {
 		display: flex;
