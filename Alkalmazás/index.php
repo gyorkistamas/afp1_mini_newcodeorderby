@@ -1,15 +1,7 @@
-
 <?php
 
 require 'controller/dbms.php';
 require 'controller/userLoggedIn.php';
-
-
-//Bejelentkező oldalra navigálás:
-
-if ( isset($_POST['LoginBtn']) ) {
-    header("Location: view/auth.php");
-}
 
 //'Termék megtekintése' gomb eltárolása egy változóban:
 

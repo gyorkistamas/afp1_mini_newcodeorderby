@@ -4,17 +4,21 @@
     $thisPage = basename($_SERVER['PHP_SELF']);
 	
     if ( isset($_POST['HomePageBtn']) ) {
-        header("Location: ../index.php");
+        header("Location:  /index.php");
     }
 
     if ( isset($_POST['AddProductBtn']) ) {
-        header("Location: view/addProduct.php");
+        header("Location: /view/addProduct.php");
+    }
+
+    if ( isset($_POST['LoginBtn']) ) {
+        header("Location: /view/auth.php");
     }
 
     if ( isset($_POST['LogoutBtn']) ) {
         unset($_SESSION['UserData']);
         session_destroy();
-        header("Location: /");
+        header("Location: /index.php");
     }
 ?>
 
@@ -25,7 +29,10 @@
    		<?php if($status): ?>
 			<button style='color: DarkSlateGray;'
 				type='submit' name='AddProductBtn' class='btn btn-info'
-			<?=($thisPage == 'addProduct.php' ? 'disabled' : '')?>>Termék hozzáadása</button> 
+				<?=($thisPage == 'addProduct.php' ? 'disabled' : '')?>
+			>
+				Termék hozzáadása
+			</button> 
             <button type='submit' name='LogoutBtn' class='btn btn-danger'>
 				Kijelentkezés
 			</button>
