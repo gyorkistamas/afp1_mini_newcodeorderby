@@ -15,5 +15,5 @@
 	$connection->query($qry);
 	$connection->close();
 
-	header("Location: ../item.php");
+	header("Location: ../item.php?product_Id=" . $_POST['product_id']);
 ?>
