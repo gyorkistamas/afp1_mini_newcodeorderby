@@ -27,3 +27,7 @@
 | :-------: | :----------: | :-----------: | :------: | :--------: |
 | _TST_010_ | hozzászólás hozzáadása gomb megnyomása (bejelentkezés nélkül) | bejelentkezésre felszólító felugró ablak feltűnése | várt eredmény | |
 | _TST_011_ | hozzászólás hozzáadása gomb megnyomása bejelentkezés után | az oldal frissül és a megjegyzés megjelenik | várt eredmény | |
+| _TST_012_ | termék hozzáadása űrlap üres feladása | az oldal figyelmeztet és nem visszautasítja a kérelmez | várt eredmény | |
+| _TST_013_ | termék hozzáadása űrlap kitöltése és feladása | a record felkerül az adatbázisba és a felhasznó átirányítódik a főoldarra | várt eredmény | |
+| _TST_014_ | termék hozzáadása űrlap kitöltése és feladása | a record felkerül az adatbázisba és a felhasznó átirányítódik a főoldarra | várt eredmény | |
+| _TST_015_ | termék hozzáadása oldal megnyitása bejelentkezés nélkül | a felhasznó átirányítódik a bejelentkezési | várt eredmény | |
